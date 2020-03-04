@@ -3,29 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		280FED4E240E4C91002D2435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED4D240E4C91002D2435 /* AppDelegate.swift */; };
 		280FED50240E4C91002D2435 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED4F240E4C91002D2435 /* SceneDelegate.swift */; };
-		280FED52240E4C91002D2435 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED51240E4C91002D2435 /* ViewController.swift */; };
 		280FED55240E4C91002D2435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280FED53240E4C91002D2435 /* Main.storyboard */; };
 		280FED57240E4C9D002D2435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280FED56240E4C9D002D2435 /* Assets.xcassets */; };
 		280FED5A240E4C9D002D2435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280FED58240E4C9D002D2435 /* LaunchScreen.storyboard */; };
 		280FED62240E531C002D2435 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 280FED61240E531C002D2435 /* .gitignore */; };
+		280FED6C240ED665002D2435 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 280FED6B240ED665002D2435 /* GoogleService-Info.plist */; };
+		280FED70240EECC2002D2435 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 280FED6F240EECC2002D2435 /* README.md */; };
+		280FED76240FADBA002D2435 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED75240FADBA002D2435 /* Post.swift */; };
+		280FED79240FC194002D2435 /* ForumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED78240FC194002D2435 /* ForumViewController.swift */; };
+		280FED8124101FEE002D2435 /* ForumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED8024101FEE002D2435 /* ForumTableViewCell.swift */; };
+		57BC7EC13CC93C3D4768EC7C /* Pods_Winstars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AD8E65AA71FB3B4E5793FD /* Pods_Winstars.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		280FED4A240E4C91002D2435 /* Winstars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Winstars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		280FED4D240E4C91002D2435 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		280FED4F240E4C91002D2435 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		280FED51240E4C91002D2435 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		280FED54240E4C91002D2435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		280FED56240E4C9D002D2435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		280FED59240E4C9D002D2435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		280FED5B240E4C9D002D2435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		280FED61240E531C002D2435 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		280FED6B240ED665002D2435 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		280FED6F240EECC2002D2435 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		280FED75240FADBA002D2435 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		280FED78240FC194002D2435 /* ForumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumViewController.swift; sourceTree = "<group>"; };
+		280FED8024101FEE002D2435 /* ForumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumTableViewCell.swift; sourceTree = "<group>"; };
+		5D058205A266DD8A10EAD606 /* Pods-Winstars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winstars.debug.xcconfig"; path = "Target Support Files/Pods-Winstars/Pods-Winstars.debug.xcconfig"; sourceTree = "<group>"; };
+		A0AD8E65AA71FB3B4E5793FD /* Pods_Winstars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Winstars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0E8980C0EBB4A9F9B44CBF4 /* Pods-Winstars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winstars.release.xcconfig"; path = "Target Support Files/Pods-Winstars/Pods-Winstars.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57BC7EC13CC93C3D4768EC7C /* Pods_Winstars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,9 +55,12 @@
 		280FED41240E4C91002D2435 = {
 			isa = PBXGroup;
 			children = (
+				280FED6F240EECC2002D2435 /* README.md */,
 				280FED61240E531C002D2435 /* .gitignore */,
 				280FED4C240E4C91002D2435 /* Winstars */,
 				280FED4B240E4C91002D2435 /* Products */,
+				A20BA4FFA73C92C8C4E7983B /* Pods */,
+				61A66066E1FE4EA61582AC4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,15 +75,51 @@
 		280FED4C240E4C91002D2435 /* Winstars */ = {
 			isa = PBXGroup;
 			children = (
+				280FED77240FC178002D2435 /* Controller */,
+				280FED74240FADAD002D2435 /* Model */,
 				280FED4D240E4C91002D2435 /* AppDelegate.swift */,
 				280FED4F240E4C91002D2435 /* SceneDelegate.swift */,
-				280FED51240E4C91002D2435 /* ViewController.swift */,
 				280FED53240E4C91002D2435 /* Main.storyboard */,
 				280FED56240E4C9D002D2435 /* Assets.xcassets */,
 				280FED58240E4C9D002D2435 /* LaunchScreen.storyboard */,
 				280FED5B240E4C9D002D2435 /* Info.plist */,
+				280FED6B240ED665002D2435 /* GoogleService-Info.plist */,
 			);
 			path = Winstars;
+			sourceTree = "<group>";
+		};
+		280FED74240FADAD002D2435 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				280FED75240FADBA002D2435 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		280FED77240FC178002D2435 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				280FED78240FC194002D2435 /* ForumViewController.swift */,
+				280FED8024101FEE002D2435 /* ForumTableViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		61A66066E1FE4EA61582AC4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0AD8E65AA71FB3B4E5793FD /* Pods_Winstars.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A20BA4FFA73C92C8C4E7983B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D058205A266DD8A10EAD606 /* Pods-Winstars.debug.xcconfig */,
+				C0E8980C0EBB4A9F9B44CBF4 /* Pods-Winstars.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +129,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 280FED5E240E4C9D002D2435 /* Build configuration list for PBXNativeTarget "Winstars" */;
 			buildPhases = (
+				FF11F77035E204526097484A /* [CP] Check Pods Manifest.lock */,
 				280FED46240E4C91002D2435 /* Sources */,
 				280FED47240E4C91002D2435 /* Frameworks */,
 				280FED48240E4C91002D2435 /* Resources */,
+				A4B93DD3BBF533ACB0065910 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,8 +182,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280FED70240EECC2002D2435 /* README.md in Resources */,
 				280FED62240E531C002D2435 /* .gitignore in Resources */,
 				280FED5A240E4C9D002D2435 /* LaunchScreen.storyboard in Resources */,
+				280FED6C240ED665002D2435 /* GoogleService-Info.plist in Resources */,
 				280FED57240E4C9D002D2435 /* Assets.xcassets in Resources */,
 				280FED55240E4C91002D2435 /* Main.storyboard in Resources */,
 			);
@@ -137,14 +193,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A4B93DD3BBF533ACB0065910 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Winstars/Pods-Winstars-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Winstars/Pods-Winstars-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Winstars/Pods-Winstars-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF11F77035E204526097484A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Winstars-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		280FED46240E4C91002D2435 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280FED52240E4C91002D2435 /* ViewController.swift in Sources */,
 				280FED4E240E4C91002D2435 /* AppDelegate.swift in Sources */,
+				280FED79240FC194002D2435 /* ForumViewController.swift in Sources */,
 				280FED50240E4C91002D2435 /* SceneDelegate.swift in Sources */,
+				280FED8124101FEE002D2435 /* ForumTableViewCell.swift in Sources */,
+				280FED76240FADBA002D2435 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +386,7 @@
 		};
 		280FED5F240E4C9D002D2435 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D058205A266DD8A10EAD606 /* Pods-Winstars.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +405,7 @@
 		};
 		280FED60240E4C9D002D2435 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0E8980C0EBB4A9F9B44CBF4 /* Pods-Winstars.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

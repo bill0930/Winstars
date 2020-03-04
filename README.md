@@ -2,31 +2,15 @@
 
 ## Requirement 
 
-Mobile App Development
+## Mobile App Development
+In this project, since setting up a backend server from scratch (server, api doc, query) is so tedious and time consuming, **'Cloud FireStore@Google Firebase'** (Backend-as-a-Service)  will be used.
 
--  Login Screen
-   -  Google / Email registeration/login
-   -  skip to view as a guest 
+### Cloud FireStore
+- NoSQL, document-oriented database
+- no tables and rows
+- Store data in *documents*, which organized into *collections*
 
--  Youtube Video listing
-   -  Youtube Data API
-   -  Postman
--  GroupChat
-   -  only the admin cannot create group
-   -  user can join multiple groups
-      -  each group has different posts
-      -  users can post text/link/emoji/photos
-
-
-
--  Discourse Fourm
-   -  Need a Cloud Server Running Unbuntu Server
-   -  need a domain name
-      -  https://discourse.winstarsenterprise.com/
-      -  DNS setup
-      -  mail setup (Sendgrid)
-      -  SSH Setup
-         -  https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/
-      -  API key: 
-         -  ALll user: e7d3fce55fb0a2b4df679f4fd5f3683cf50f0804e69591a312946c047a85d5d1
-         -  chiyuchan4-c: a47d91ad5dfba51f2ce3839d3b2ee39cdc3a3788a8e16555ace972085efe78cf
+### Documents
+-   a set of key-value pairs
+-  must be stored in collections
+- can contain subcollections and nested objects,
