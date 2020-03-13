@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Message {
+public struct Message: Codable {
     var user: User?
     var content: String?
     var is_archived: Bool = false
@@ -18,5 +18,10 @@ class Message {
         self.content = content
         self.is_archived = is_archived
     }
-
+    
+    enum CodingKeys: String, CodingKey {
+          case user
+          case content
+          case is_archived
+      }
 }

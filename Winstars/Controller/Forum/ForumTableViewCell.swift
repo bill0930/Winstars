@@ -10,15 +10,13 @@ import UIKit
 
 class ForumTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var forumButton: UIButton!
     
+    @IBOutlet weak var categoryLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    @IBAction func onClick(_ sender: UIButton) {
-    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

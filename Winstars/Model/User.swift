@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User {
+public struct User: Codable {
     
     var id: Int?
     var username: String
@@ -21,4 +21,12 @@ class User {
         self.email = email
         self.password = password
     }
+    
+    enum CodingKeys: String, CodingKey {
+             case id
+             case username
+             case email
+             case password
+             case is_verified
+         }
 }

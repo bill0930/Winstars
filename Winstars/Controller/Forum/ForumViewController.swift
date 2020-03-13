@@ -15,10 +15,10 @@ import FirebaseCore
 
 class FourmViewController: UIViewController  {
     
-    var categoryLabel: String?
+    var selectedCategory: String?
     let db = Firestore.firestore()
     
-    var forumList = ["Engineering", "Mathmatics", "Science", "Technology"]
+    var categoryList = ["Science", "Technology","Engineering", "Mathmatics", "Coding"]
     
     func addData(list_of_doc: [String]){
         for ele in list_of_doc{
@@ -30,7 +30,7 @@ class FourmViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addData(list_of_doc: forumList)
+        addData(list_of_doc: categoryList)
         // Do any additional setup after loading the view.
         
     }
@@ -44,29 +44,28 @@ extension FourmViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return categoryList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =
             tableView.dequeueReusableCell( withIdentifier: "Cell", for: indexPath) as! ForumTableViewCell
-        cell.forumButton.setTitle(forumList[indexPath.row], for: .normal)
+        cell.categoryLabel.text = categoryList[indexPath.row]
         return cell
-        
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        print("clicked")
+        selectedCategory = categoryList[indexPath.row]
+         self.performSegue(withIdentifier: "toPostView", sender: self)
         
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       let post: FourmPostViewController = segue.destination as! FourmPostViewController
-//
-//        post.postLabe.text! = categoryCell.categoryLabel
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       let postViewController = segue.destination as! ForumPostViewController
+        postViewController.data["categoryLabel"] = selectedCategory!
+        
        }
 
 }

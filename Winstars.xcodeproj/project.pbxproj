@@ -21,6 +21,7 @@
 		283F581E241B6ED20092E7D8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F581D241B6ED20092E7D8 /* Message.swift */; };
 		283F5820241B6F2F0092E7D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F581F241B6F2F0092E7D8 /* User.swift */; };
 		283F5822241B72410092E7D8 /* FourmPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5821241B72410092E7D8 /* FourmPostViewController.swift */; };
+		283F5827241BBD050092E7D8 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5826241BBD050092E7D8 /* Extention.swift */; };
 		57BC7EC13CC93C3D4768EC7C /* Pods_Winstars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AD8E65AA71FB3B4E5793FD /* Pods_Winstars.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		283F581D241B6ED20092E7D8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		283F581F241B6F2F0092E7D8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		283F5821241B72410092E7D8 /* FourmPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourmPostViewController.swift; sourceTree = "<group>"; };
+		283F5826241BBD050092E7D8 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		5D058205A266DD8A10EAD606 /* Pods-Winstars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winstars.debug.xcconfig"; path = "Target Support Files/Pods-Winstars/Pods-Winstars.debug.xcconfig"; sourceTree = "<group>"; };
 		A0AD8E65AA71FB3B4E5793FD /* Pods_Winstars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Winstars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E8980C0EBB4A9F9B44CBF4 /* Pods-Winstars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winstars.release.xcconfig"; path = "Target Support Files/Pods-Winstars/Pods-Winstars.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		280FED4C240E4C91002D2435 /* Winstars */ = {
 			isa = PBXGroup;
 			children = (
+				283F5825241BBCEF0092E7D8 /* Extenstion */,
 				280FED77240FC178002D2435 /* Controller */,
 				280FED74240FADAD002D2435 /* Model */,
 				280FED4D240E4C91002D2435 /* AppDelegate.swift */,
@@ -107,11 +110,35 @@
 		280FED77240FC178002D2435 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				280FED78240FC194002D2435 /* ForumViewController.swift */,
-				280FED8024101FEE002D2435 /* ForumTableViewCell.swift */,
-				283F5821241B72410092E7D8 /* FourmPostViewController.swift */,
+				283F5823241B95A40092E7D8 /* Forum */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		283F5823241B95A40092E7D8 /* Forum */ = {
+			isa = PBXGroup;
+			children = (
+				283F5824241B975C0092E7D8 /* Post */,
+				280FED78240FC194002D2435 /* ForumViewController.swift */,
+				280FED8024101FEE002D2435 /* ForumTableViewCell.swift */,
+			);
+			path = Forum;
+			sourceTree = "<group>";
+		};
+		283F5824241B975C0092E7D8 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				283F5821241B72410092E7D8 /* FourmPostViewController.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		283F5825241BBCEF0092E7D8 /* Extenstion */ = {
+			isa = PBXGroup;
+			children = (
+				283F5826241BBD050092E7D8 /* Extention.swift */,
+			);
+			path = Extenstion;
 			sourceTree = "<group>";
 		};
 		61A66066E1FE4EA61582AC4B /* Frameworks */ = {
@@ -256,6 +283,7 @@
 				280FED8124101FEE002D2435 /* ForumTableViewCell.swift in Sources */,
 				280FED76240FADBA002D2435 /* Post.swift in Sources */,
 				283F5822241B72410092E7D8 /* FourmPostViewController.swift in Sources */,
+				283F5827241BBD050092E7D8 /* Extention.swift in Sources */,
 				283F5820241B6F2F0092E7D8 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
