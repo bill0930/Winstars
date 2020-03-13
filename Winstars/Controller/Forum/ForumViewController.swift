@@ -49,7 +49,7 @@ extension FourmViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =
-            tableView.dequeueReusableCell( withIdentifier: "Cell", for: indexPath) as! ForumTableViewCell
+            tableView.dequeueReusableCell( withIdentifier: "catgoryCell", for: indexPath) as! ForumTableViewCell
         cell.categoryLabel.text = categoryList[indexPath.row]
         return cell
         

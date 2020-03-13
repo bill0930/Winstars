@@ -8,17 +8,10 @@
 
 import Foundation
 
-class Post {
-    var user: User?
-    var title: String = ""
-    var content: String = ""
-    var is_archived: Bool = false
-    var message: [Message]?
-    
-    init(title: String, is_archived: Bool, content: String) {
-        self.title = title
-        self.content = content
-        self.is_archived = is_archived
-    }
-    
+public struct Post: Convertable {
+
+    var title: String?
+    var user: String?
+    var content: String?
+
 }

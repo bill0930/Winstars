@@ -34,3 +34,12 @@ extension Convertable {
         return dict
     }
 }
+
+public class Extension {
+    public static func emojiGenerate() -> String? {
+        let emojiArray = ["😀","😍","🤓","🥺","😠","🤯"
+            ,"🥱", "🤗"]
+        
+        return emojiArray.shuffled().first
+    }
+}
