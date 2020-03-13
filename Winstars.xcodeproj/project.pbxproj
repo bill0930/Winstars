@@ -18,6 +18,9 @@
 		280FED76240FADBA002D2435 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED75240FADBA002D2435 /* Post.swift */; };
 		280FED79240FC194002D2435 /* ForumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED78240FC194002D2435 /* ForumViewController.swift */; };
 		280FED8124101FEE002D2435 /* ForumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED8024101FEE002D2435 /* ForumTableViewCell.swift */; };
+		283F581E241B6ED20092E7D8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F581D241B6ED20092E7D8 /* Message.swift */; };
+		283F5820241B6F2F0092E7D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F581F241B6F2F0092E7D8 /* User.swift */; };
+		283F5822241B72410092E7D8 /* FourmPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5821241B72410092E7D8 /* FourmPostViewController.swift */; };
 		57BC7EC13CC93C3D4768EC7C /* Pods_Winstars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AD8E65AA71FB3B4E5793FD /* Pods_Winstars.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,9 @@
 		280FED75240FADBA002D2435 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		280FED78240FC194002D2435 /* ForumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumViewController.swift; sourceTree = "<group>"; };
 		280FED8024101FEE002D2435 /* ForumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumTableViewCell.swift; sourceTree = "<group>"; };
+		283F581D241B6ED20092E7D8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		283F581F241B6F2F0092E7D8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		283F5821241B72410092E7D8 /* FourmPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourmPostViewController.swift; sourceTree = "<group>"; };
 		5D058205A266DD8A10EAD606 /* Pods-Winstars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winstars.debug.xcconfig"; path = "Target Support Files/Pods-Winstars/Pods-Winstars.debug.xcconfig"; sourceTree = "<group>"; };
 		A0AD8E65AA71FB3B4E5793FD /* Pods_Winstars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Winstars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E8980C0EBB4A9F9B44CBF4 /* Pods-Winstars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winstars.release.xcconfig"; path = "Target Support Files/Pods-Winstars/Pods-Winstars.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				280FED75240FADBA002D2435 /* Post.swift */,
+				283F581D241B6ED20092E7D8 /* Message.swift */,
+				283F581F241B6F2F0092E7D8 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -101,6 +109,7 @@
 			children = (
 				280FED78240FC194002D2435 /* ForumViewController.swift */,
 				280FED8024101FEE002D2435 /* ForumTableViewCell.swift */,
+				283F5821241B72410092E7D8 /* FourmPostViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,8 +252,11 @@
 				280FED4E240E4C91002D2435 /* AppDelegate.swift in Sources */,
 				280FED79240FC194002D2435 /* ForumViewController.swift in Sources */,
 				280FED50240E4C91002D2435 /* SceneDelegate.swift in Sources */,
+				283F581E241B6ED20092E7D8 /* Message.swift in Sources */,
 				280FED8124101FEE002D2435 /* ForumTableViewCell.swift in Sources */,
 				280FED76240FADBA002D2435 /* Post.swift in Sources */,
+				283F5822241B72410092E7D8 /* FourmPostViewController.swift in Sources */,
+				283F5820241B6F2F0092E7D8 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
