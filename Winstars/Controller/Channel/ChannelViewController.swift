@@ -28,13 +28,11 @@ class ChannelViewController: UIViewController  {
     private var reference: CollectionReference?
     
     var data = [
-        "groupLabel": "" // the label selected
-    ]
-    private var channels = [[String: Any]]() {
-        didSet {
-            channelTableView.reloadData()
-        }
-    }
+        "group_id": nil ,
+        "group_name": nil
+        ] as [String : Any?]
+    // the label selected
+    var channels = [Channel]()
     
     
     @IBAction func addButtonPressed(_ sender: Any) {
@@ -65,25 +63,14 @@ class ChannelViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navbar.title = data["categoryLabel"]
+        navbar.title = (data["group_name"] as! String)
     }
     
-    private func createChannel() {
-//        guard let ac = currentChannelAlertController else {
-//            return
-//        }
-//        let channel = Channel(name: channelName, author: "testUser")
-//        channelReference.addDocument(data: channel.representation) { error in
-//            if let e = error {
-//                print("Error saving channel: \(e.localizedDescription)")
-//            }
-//        }
-    }
 }
 
 
 
-extension ChannelViewController {
+extension ChannelViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -96,22 +83,22 @@ extension ChannelViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =
             tableView.dequeueReusableCell( withIdentifier: "channelCell", for: indexPath) as! ChannelViewTableViewCell
-        cell.authorLabel?.text = "posted by: \(channels[indexPath.row]["user"]!)"
-        cell.titleLabel?.text = "\(channels[indexPath.row]["title"]!)"
+//        cell.authorLabel?.text = "posted by: \(channels[indexPath.row]["user"]!)"
+//        cell.titleLabel?.text = "\(channels[indexPath.row]["title"]!)"
         cell.emojiLabel?.text = Extension.emojiGenerate()!
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(channels[indexPath.row])
-        self.performSegue(withIdentifier: "toChatView", sender: self)
+//        print(channels[indexPath.row])
+//        self.performSegue(withIdentifier: "toChatView", sender: self)
         
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let chatViewController = segue.destination as! ChatViewController
+//        let chatViewController = segue.destination as! ChatViewController
         //        messageViewController.data["messages"] = "testMsg"
         
     }

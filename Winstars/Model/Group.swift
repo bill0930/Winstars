@@ -14,10 +14,12 @@ struct Group {
     
     let id: String?
     let name: String
+    let listNum: Int
     
-    init(name: String) {
+    init(name: String, listNum: Int) {
         id = nil
         self.name = name
+        self.listNum = listNum
     }
     
     init?(document: QueryDocumentSnapshot) {
@@ -27,8 +29,13 @@ struct Group {
             return nil
         }
         
+        guard let listNum = data["listNum"] as? Int else {
+                   return nil
+               }
+        
         id = document.documentID
         self.name = name
+        self.listNum = listNum
     }
     
     init?(document: DocumentSnapshot) {
@@ -38,8 +45,13 @@ struct Group {
             return nil
         }
         
+        guard let listNum = data!["listNum"] as? Int else {
+                          return nil
+                      }
+        
         id = document.documentID
         self.name = name
+        self.listNum = listNum
     }
     
 }
@@ -49,7 +61,8 @@ extension Group: DatabaseRepresentation {
     var representation: [String : Any] {
         var rep = [
             "name": name ,
-        ]
+            "listNum": listNum
+            ] as [String : Any]
         
         if let id = id {
             rep["id"] = id
@@ -68,8 +81,11 @@ extension Group: Comparable {
     return lhs.id == rhs.id
   }
   
+    //  for  groups.sort()
   static func < (lhs: Group, rhs: Group) -> Bool {
-    return lhs.name < rhs.name
+    return lhs.listNum < rhs.listNum
   }
+    
+
 
 }

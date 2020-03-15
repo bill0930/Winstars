@@ -15,7 +15,7 @@ import FirebaseCore
 
 class GroupViewController: UIViewController  {
     
-    var selectedCategory: String?
+    var selectedGroup: Group?
     let db = Firestore.firestore()
     
     
@@ -35,10 +35,10 @@ class GroupViewController: UIViewController  {
     
     private var groups = [Group](){
         didSet{
-//            print(groups)
+            //            print(groups)
         }
     } // [id: String?, name: String]
-
+    
     
     @IBOutlet weak var groupLabelTableView: UITableView!
     
@@ -64,16 +64,6 @@ class GroupViewController: UIViewController  {
     override func viewDidAppear(_ animated: Bool) {
         
     }
-    //add groups/group_id/channels
-    private func createGroup() {
-        
-        let group = Group(name: "Science")
-        groupReference.addDocument(data: group.representation) { error in
-            if let e = error {
-                print("Error saving channel: \(e.localizedDescription)")
-            }
-        }
-    }
     
     private func addGroupToTable(_ group: Group) {
         guard !groups.contains(group) else {
@@ -81,7 +71,7 @@ class GroupViewController: UIViewController  {
         }
         
         groups.append(group)
-//        groups.sort()
+        groups.sort()
         
         guard let index = groups.firstIndex(of: group) else {
             return
@@ -145,16 +135,16 @@ extension GroupViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-                selectedCategory = groups[indexPath.row].name
+        selectedGroup = groups[indexPath.row]
         print("you selected \(groups[indexPath.row].representation)")
-        //        self.performSegue(withIdentifier: "toChannelView", sender: self)
+        self.performSegue(withIdentifier: "toChannelView", sender: self)
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //        let channelVC = segue.destination as! ChannelViewController
-        //        channelVC.data["groupLabel"] = selectedCategory!
-        
+        let channelVC = segue.destination as! ChannelViewController
+        channelVC.data["group_id"] = selectedGroup?.id!
+        channelVC.data["group_name"] = selectedGroup?.name
     }
     
 }

@@ -7,21 +7,21 @@
 //
 
 import Foundation
+import MessageKit
 
-public struct Message: Codable {
-    var user: User?
-    var content: String?
-    var is_archived: Bool = false
+
+// Represents a message within MessengerKit.
+public struct Message: MessageType{
     
-    init(user: User, content: String, is_archived: Bool) {
-        self.user = user
-        self.content = content
-        self.is_archived = is_archived
-    }
+    public var sender: SenderType
     
-    enum CodingKeys: String, CodingKey {
-          case user
-          case content
-          case is_archived
-      }
+    public var messageId: String
+    
+    public var sentDate: Date
+    
+    public var kind: MessageKind
+    
+    
+    
+    
 }
