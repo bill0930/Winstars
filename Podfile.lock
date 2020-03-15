@@ -164,7 +164,6 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.3):
     - BoringSSL-GRPC/Interface (= 0.0.3)
   - BoringSSL-GRPC/Interface (0.0.3)
-  - expanding-collection (3.1.0)
   - Firebase/Analytics (6.18.0):
     - Firebase/Core
   - Firebase/Core (6.18.0):
@@ -260,27 +259,27 @@ PODS:
     - gRPC-Core/Interface (= 1.21.0)
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.21.0)
+  - InputBarAccessoryView (4.2.2)
   - leveldb-library (1.22)
+  - MessageKit (3.0.0):
+    - InputBarAccessoryView (~> 4.2.2)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
-  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
-  - expanding-collection
   - Firebase/Analytics
   - Firebase/Firestore
   - FirebaseFirestoreSwift
-  - XLPagerTabStrip (~> 9.0)
+  - MessageKit
 
 SPEC REPOS:
   trunk:
     - abseil
     - BoringSSL-GRPC
-    - expanding-collection
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuthInterop
@@ -296,15 +295,15 @@ SPEC REPOS:
     - GoogleUtilities
     - "gRPC-C++"
     - gRPC-Core
+    - InputBarAccessoryView
     - leveldb-library
+    - MessageKit
     - nanopb
     - PromisesObjC
-    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
-  expanding-collection: 7eb1fc48c6ec5e00c8887fe46c595c31b81b578a
   Firebase: 0490eca762a72e4f1582319539153897f1508dee
   FirebaseAnalytics: 058d71e714a1a6804d9e0f25e3bb18e377a51579
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
@@ -320,11 +319,12 @@ SPEC CHECKSUMS:
   GoogleUtilities: 06eb53bb579efe7099152735900dd04bf09e7275
   "gRPC-C++": 9dfe7b44821e7b3e44aacad2af29d2c21f7cde83
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
+  InputBarAccessoryView: 2b937602598e2fab3149f37f51dd7ad795653812
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  MessageKit: e892a9ca49ebe6d82684d3a93ad84021fa23e2c6
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
-  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 95f88df4ec3367243f0cfe974ad9592683eaf5c1
+PODFILE CHECKSUM: c74ec5c470e78b691e957eb0cacbd6a6ad09dd94
 
 COCOAPODS: 1.9.0

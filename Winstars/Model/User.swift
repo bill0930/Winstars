@@ -7,26 +7,11 @@
 //
 
 import Foundation
+import MessageKit
 
-public struct User: Codable {
+public struct User: SenderType {
     
-    var id: Int?
-    var username: String
-    var email: String
-    var password: String
-    var is_verified: Bool = false
+    public var senderId: String
+    public var displayName: String
     
-    init(username: String, email: String, password: String) {
-        self.username = username
-        self.email = email
-        self.password = password
-    }
-    
-    enum CodingKeys: String, CodingKey {
-             case id
-             case username
-             case email
-             case password
-             case is_verified
-         }
 }

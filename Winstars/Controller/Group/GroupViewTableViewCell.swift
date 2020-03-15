@@ -1,19 +1,18 @@
 //
-//  ForumPostiVIewTableViewCell.swift
+//  ForumTableViewCell.swift
 //  Winstars
 //
-//  Created by CHAN CHI YU on 13/3/2020.
+//  Created by CHAN CHI YU on 5/3/2020.
 //  Copyright © 2020 Billy Chan. All rights reserved.
 //
 
 import UIKit
 
-class ForumPostiVIewTableViewCell: UITableViewCell {
+class GroupViewTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var authorLabel: UILabel!
-    @IBOutlet weak var emojiLabel: UILabel!
     
+
+    @IBOutlet weak var categoryLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

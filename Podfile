@@ -14,6 +14,6 @@ target 'Winstars' do
 
   # Optionally, include the Swift extensions if you're using Swift.
   pod 'FirebaseFirestoreSwift'
-  pod 'XLPagerTabStrip', '~> 9.0'
+  pod 'MessageKit'
 
 end

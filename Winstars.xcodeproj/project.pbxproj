@@ -15,14 +15,17 @@
 		280FED62240E531C002D2435 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 280FED61240E531C002D2435 /* .gitignore */; };
 		280FED6C240ED665002D2435 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 280FED6B240ED665002D2435 /* GoogleService-Info.plist */; };
 		280FED70240EECC2002D2435 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 280FED6F240EECC2002D2435 /* README.md */; };
-		280FED76240FADBA002D2435 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED75240FADBA002D2435 /* Post.swift */; };
-		280FED79240FC194002D2435 /* ForumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED78240FC194002D2435 /* ForumViewController.swift */; };
-		280FED8124101FEE002D2435 /* ForumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED8024101FEE002D2435 /* ForumTableViewCell.swift */; };
+		280FED76240FADBA002D2435 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED75240FADBA002D2435 /* Channel.swift */; };
+		280FED79240FC194002D2435 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED78240FC194002D2435 /* GroupViewController.swift */; };
+		280FED8124101FEE002D2435 /* GroupViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED8024101FEE002D2435 /* GroupViewTableViewCell.swift */; };
 		283F581E241B6ED20092E7D8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F581D241B6ED20092E7D8 /* Message.swift */; };
 		283F5820241B6F2F0092E7D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F581F241B6F2F0092E7D8 /* User.swift */; };
-		283F5822241B72410092E7D8 /* FourmPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5821241B72410092E7D8 /* FourmPostViewController.swift */; };
+		283F5822241B72410092E7D8 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5821241B72410092E7D8 /* ChannelViewController.swift */; };
 		283F5827241BBD050092E7D8 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5826241BBD050092E7D8 /* Extention.swift */; };
-		283F5829241BCCD90092E7D8 /* ForumPostiVIewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5828241BCCD90092E7D8 /* ForumPostiVIewTableViewCell.swift */; };
+		283F5829241BCCD90092E7D8 /* ChannelViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5828241BCCD90092E7D8 /* ChannelViewTableViewCell.swift */; };
+		283F582B241BFBBA0092E7D8 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F582A241BFBBA0092E7D8 /* ChatViewController.swift */; };
+		283F5835241E2C050092E7D8 /* DatabaseRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5834241E2C040092E7D8 /* DatabaseRepresentation.swift */; };
+		283F5837241E48B00092E7D8 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5836241E48AF0092E7D8 /* Group.swift */; };
 		57BC7EC13CC93C3D4768EC7C /* Pods_Winstars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AD8E65AA71FB3B4E5793FD /* Pods_Winstars.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,14 +40,17 @@
 		280FED61240E531C002D2435 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		280FED6B240ED665002D2435 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		280FED6F240EECC2002D2435 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		280FED75240FADBA002D2435 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		280FED78240FC194002D2435 /* ForumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumViewController.swift; sourceTree = "<group>"; };
-		280FED8024101FEE002D2435 /* ForumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumTableViewCell.swift; sourceTree = "<group>"; };
+		280FED75240FADBA002D2435 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		280FED78240FC194002D2435 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		280FED8024101FEE002D2435 /* GroupViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewTableViewCell.swift; sourceTree = "<group>"; };
 		283F581D241B6ED20092E7D8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		283F581F241B6F2F0092E7D8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		283F5821241B72410092E7D8 /* FourmPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourmPostViewController.swift; sourceTree = "<group>"; };
+		283F5821241B72410092E7D8 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		283F5826241BBD050092E7D8 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
-		283F5828241BCCD90092E7D8 /* ForumPostiVIewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumPostiVIewTableViewCell.swift; sourceTree = "<group>"; };
+		283F5828241BCCD90092E7D8 /* ChannelViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewTableViewCell.swift; sourceTree = "<group>"; };
+		283F582A241BFBBA0092E7D8 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		283F5834241E2C040092E7D8 /* DatabaseRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepresentation.swift; sourceTree = "<group>"; };
+		283F5836241E48AF0092E7D8 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		5D058205A266DD8A10EAD606 /* Pods-Winstars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winstars.debug.xcconfig"; path = "Target Support Files/Pods-Winstars/Pods-Winstars.debug.xcconfig"; sourceTree = "<group>"; };
 		A0AD8E65AA71FB3B4E5793FD /* Pods_Winstars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Winstars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E8980C0EBB4A9F9B44CBF4 /* Pods-Winstars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winstars.release.xcconfig"; path = "Target Support Files/Pods-Winstars/Pods-Winstars.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,9 +108,11 @@
 		280FED74240FADAD002D2435 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				280FED75240FADBA002D2435 /* Post.swift */,
+				280FED75240FADBA002D2435 /* Channel.swift */,
 				283F581D241B6ED20092E7D8 /* Message.swift */,
 				283F581F241B6F2F0092E7D8 /* User.swift */,
+				283F5834241E2C040092E7D8 /* DatabaseRepresentation.swift */,
+				283F5836241E48AF0092E7D8 /* Group.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -112,28 +120,29 @@
 		280FED77240FC178002D2435 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				283F5823241B95A40092E7D8 /* Forum */,
+				283F5824241B975C0092E7D8 /* Channel */,
+				283F5823241B95A40092E7D8 /* Group */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		283F5823241B95A40092E7D8 /* Forum */ = {
+		283F5823241B95A40092E7D8 /* Group */ = {
 			isa = PBXGroup;
 			children = (
-				283F5824241B975C0092E7D8 /* Post */,
-				280FED78240FC194002D2435 /* ForumViewController.swift */,
-				280FED8024101FEE002D2435 /* ForumTableViewCell.swift */,
+				280FED78240FC194002D2435 /* GroupViewController.swift */,
+				280FED8024101FEE002D2435 /* GroupViewTableViewCell.swift */,
 			);
-			path = Forum;
+			path = Group;
 			sourceTree = "<group>";
 		};
-		283F5824241B975C0092E7D8 /* Post */ = {
+		283F5824241B975C0092E7D8 /* Channel */ = {
 			isa = PBXGroup;
 			children = (
-				283F5821241B72410092E7D8 /* FourmPostViewController.swift */,
-				283F5828241BCCD90092E7D8 /* ForumPostiVIewTableViewCell.swift */,
+				283F5821241B72410092E7D8 /* ChannelViewController.swift */,
+				283F5828241BCCD90092E7D8 /* ChannelViewTableViewCell.swift */,
+				283F582A241BFBBA0092E7D8 /* ChatViewController.swift */,
 			);
-			path = Post;
+			path = Channel;
 			sourceTree = "<group>";
 		};
 		283F5825241BBCEF0092E7D8 /* Extenstion */ = {
@@ -280,13 +289,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				280FED4E240E4C91002D2435 /* AppDelegate.swift in Sources */,
-				280FED79240FC194002D2435 /* ForumViewController.swift in Sources */,
+				280FED79240FC194002D2435 /* GroupViewController.swift in Sources */,
 				280FED50240E4C91002D2435 /* SceneDelegate.swift in Sources */,
+				283F5835241E2C050092E7D8 /* DatabaseRepresentation.swift in Sources */,
 				283F581E241B6ED20092E7D8 /* Message.swift in Sources */,
-				280FED8124101FEE002D2435 /* ForumTableViewCell.swift in Sources */,
-				280FED76240FADBA002D2435 /* Post.swift in Sources */,
-				283F5829241BCCD90092E7D8 /* ForumPostiVIewTableViewCell.swift in Sources */,
-				283F5822241B72410092E7D8 /* FourmPostViewController.swift in Sources */,
+				280FED8124101FEE002D2435 /* GroupViewTableViewCell.swift in Sources */,
+				283F5837241E48B00092E7D8 /* Group.swift in Sources */,
+				280FED76240FADBA002D2435 /* Channel.swift in Sources */,
+				283F5829241BCCD90092E7D8 /* ChannelViewTableViewCell.swift in Sources */,
+				283F582B241BFBBA0092E7D8 /* ChatViewController.swift in Sources */,
+				283F5822241B72410092E7D8 /* ChannelViewController.swift in Sources */,
 				283F5827241BBD050092E7D8 /* Extention.swift in Sources */,
 				283F5820241B6F2F0092E7D8 /* User.swift in Sources */,
 			);

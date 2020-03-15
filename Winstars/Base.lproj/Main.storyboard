@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Forum View Controller-->
+        <!--Group View Controller-->
         <scene sceneID="j3R-uZ-eqo">
             <objects>
-                <viewController id="Zz9-j5-xpu" userLabel="Forum View Controller" customClass="FourmViewController" customModule="Winstars" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zz9-j5-xpu" customClass="GroupViewController" customModule="Winstars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hr5-ZP-A9W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,14 +22,14 @@
                                 <color key="sectionIndexBackgroundColor" red="0.93953561779999994" green="0.97968536620000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.93953561779999994" green="0.97968536620000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="catgoryCell" id="QQh-zr-gmt" customClass="ForumTableViewCell" customModule="Winstars" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="groupCell" id="QQh-zr-gmt" customClass="GroupViewTableViewCell" customModule="Winstars" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QQh-zr-gmt" id="3Qd-zl-CMm">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppa-lv-l95">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppa-lv-l95">
                                                     <rect key="frame" x="5" y="0.0" width="364" height="150"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
                                                     <nil key="textColor"/>
@@ -38,18 +38,20 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.87331873179999997" green="0.94547933340000001" blue="0.94278413059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Ppa-lv-l95" secondAttribute="trailing" constant="5" id="Fov-0a-Sey"/>
-                                                <constraint firstItem="Ppa-lv-l95" firstAttribute="leading" secondItem="3Qd-zl-CMm" secondAttribute="leading" constant="5" id="Un0-8k-E0J"/>
+                                                <constraint firstItem="Ppa-lv-l95" firstAttribute="centerX" secondItem="3Qd-zl-CMm" secondAttribute="centerX" id="1wh-Uj-sM6"/>
+                                                <constraint firstItem="Ppa-lv-l95" firstAttribute="centerY" secondItem="3Qd-zl-CMm" secondAttribute="centerY" id="2Gj-PY-i8k"/>
+                                                <constraint firstItem="Ppa-lv-l95" firstAttribute="top" secondItem="3Qd-zl-CMm" secondAttribute="topMargin" constant="-11" id="pgw-Tl-JzD"/>
+                                                <constraint firstItem="Ppa-lv-l95" firstAttribute="leading" secondItem="3Qd-zl-CMm" secondAttribute="leadingMargin" constant="-15" id="wKL-nF-ByP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="categoryLabel" destination="Ppa-lv-l95" id="5lq-Bd-3Dn"/>
+                                            <outlet property="categoryLabel" destination="Ppa-lv-l95" id="kTc-yh-dMk"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="Zz9-j5-xpu" id="nxi-pV-3mL"/>
-                                    <outlet property="delegate" destination="Zz9-j5-xpu" id="aZJ-QI-St7"/>
+                                    <outlet property="dataSource" destination="Zz9-j5-xpu" id="Kvj-Ov-XOe"/>
+                                    <outlet property="delegate" destination="Zz9-j5-xpu" id="bPc-x5-4xx"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -64,7 +66,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="b8S-xd-sbI"/>
                     <connections>
-                        <segue destination="fty-qM-Iu3" kind="show" identifier="toPostView" id="uGN-VO-q4a"/>
+                        <outlet property="groupLabelTableView" destination="Xlw-gn-M6J" id="q5i-HT-t9W"/>
+                        <segue destination="fty-qM-Iu3" kind="show" identifier="toChannelView" id="uGN-VO-q4a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JPr-yL-HFK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -74,16 +77,16 @@
         <!--PostView Controller-->
         <scene sceneID="Ayf-KP-25l">
             <objects>
-                <viewController id="fty-qM-Iu3" userLabel="PostView Controller" customClass="ForumPostViewController" customModule="Winstars" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="fty-qM-Iu3" userLabel="PostView Controller" customClass="ChannelViewController" customModule="Winstars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hZK-fL-h7e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7k6-Og-JYa">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postCell" rowHeight="100" id="DQZ-Jc-Sbs" customClass="ForumPostiVIewTableViewCell" customModule="Winstars" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="channelCell" rowHeight="100" id="DQZ-Jc-Sbs" customClass="ChannelViewTableViewCell" customModule="Winstars" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DQZ-Jc-Sbs" id="bx4-Nl-pYs">
@@ -104,7 +107,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今天我寒夜裡看到的風景擴大老驥伏櫪凱撒放假了" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sre-Nv-UNc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我我我我我我我我我我我我我我我我我我我我我我我我我我v" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sre-Nv-UNc">
                                                     <rect key="frame" x="117" y="11" width="260" height="62"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
@@ -138,15 +141,38 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ik0-UE-eUQ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JT0-dI-Nc8"/>
+                    <navigationItem key="navigationItem" id="JT0-dI-Nc8">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="cXD-J1-BXP">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="fty-qM-Iu3" id="Xyy-ht-TTE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="channelTableView" destination="7k6-Og-JYa" id="pYn-YX-FcI"/>
                         <outlet property="navbar" destination="JT0-dI-Nc8" id="eZ5-Oz-pQm"/>
-                        <outlet property="postTableView" destination="7k6-Og-JYa" id="pYn-YX-FcI"/>
+                        <segue destination="Ggj-8C-LTl" kind="show" identifier="toChatView" id="Z80-KJ-yhj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uPT-NM-cEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1369.5652173913045" y="-332.14285714285711"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="b8T-LW-5Rw">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="Ggj-8C-LTl" userLabel="Chat View Controller" customClass="ChatViewController" customModule="Winstars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wZ4-hj-Rbd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="lhl-BT-QsO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qzs-Hh-7Gh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rXI-nF-h7i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2125" y="-332"/>
         </scene>
         <!--Video VIew Controller-->
         <scene sceneID="ggz-Mg-5ON">
@@ -204,11 +230,11 @@
             </objects>
             <point key="canvasLocation" x="-1235" y="-332"/>
         </scene>
-        <!--Forum-->
+        <!--Group-->
         <scene sceneID="6F5-J9-mIb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="umE-7o-gHx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Forum" image="person.3.fill" catalog="system" id="kdx-Xe-Ei6"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="umE-7o-gHx" userLabel="Group" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Group" image="person.3.fill" catalog="system" id="kdx-Xe-Ei6" userLabel="Group"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tkg-3J-v9a">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
