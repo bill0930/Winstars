@@ -26,6 +26,7 @@
 		283F582B241BFBBA0092E7D8 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F582A241BFBBA0092E7D8 /* ChatViewController.swift */; };
 		283F5835241E2C050092E7D8 /* DatabaseRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5834241E2C040092E7D8 /* DatabaseRepresentation.swift */; };
 		283F5837241E48B00092E7D8 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5836241E48AF0092E7D8 /* Group.swift */; };
+		283F5839241F691C0092E7D8 /* AddChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5838241F691B0092E7D8 /* AddChannelViewController.swift */; };
 		57BC7EC13CC93C3D4768EC7C /* Pods_Winstars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AD8E65AA71FB3B4E5793FD /* Pods_Winstars.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		283F582A241BFBBA0092E7D8 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		283F5834241E2C040092E7D8 /* DatabaseRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepresentation.swift; sourceTree = "<group>"; };
 		283F5836241E48AF0092E7D8 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		283F5838241F691B0092E7D8 /* AddChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelViewController.swift; sourceTree = "<group>"; };
 		5D058205A266DD8A10EAD606 /* Pods-Winstars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winstars.debug.xcconfig"; path = "Target Support Files/Pods-Winstars/Pods-Winstars.debug.xcconfig"; sourceTree = "<group>"; };
 		A0AD8E65AA71FB3B4E5793FD /* Pods_Winstars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Winstars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E8980C0EBB4A9F9B44CBF4 /* Pods-Winstars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winstars.release.xcconfig"; path = "Target Support Files/Pods-Winstars/Pods-Winstars.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				283F5821241B72410092E7D8 /* ChannelViewController.swift */,
 				283F5828241BCCD90092E7D8 /* ChannelViewTableViewCell.swift */,
 				283F582A241BFBBA0092E7D8 /* ChatViewController.swift */,
+				283F5838241F691B0092E7D8 /* AddChannelViewController.swift */,
 			);
 			path = Channel;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				283F582B241BFBBA0092E7D8 /* ChatViewController.swift in Sources */,
 				283F5822241B72410092E7D8 /* ChannelViewController.swift in Sources */,
 				283F5827241BBD050092E7D8 /* Extention.swift in Sources */,
+				283F5839241F691C0092E7D8 /* AddChannelViewController.swift in Sources */,
 				283F5820241B6F2F0092E7D8 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

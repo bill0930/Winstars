@@ -13,6 +13,7 @@ class ChannelViewTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var emojiLabel: UILabel!
+    @IBOutlet weak var timestampLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
