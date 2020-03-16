@@ -19,7 +19,6 @@
 		280FED79240FC194002D2435 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED78240FC194002D2435 /* GroupViewController.swift */; };
 		280FED8124101FEE002D2435 /* GroupViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED8024101FEE002D2435 /* GroupViewTableViewCell.swift */; };
 		283F581E241B6ED20092E7D8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F581D241B6ED20092E7D8 /* Message.swift */; };
-		283F5820241B6F2F0092E7D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F581F241B6F2F0092E7D8 /* User.swift */; };
 		283F5822241B72410092E7D8 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5821241B72410092E7D8 /* ChannelViewController.swift */; };
 		283F5827241BBD050092E7D8 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5826241BBD050092E7D8 /* Extention.swift */; };
 		283F5829241BCCD90092E7D8 /* ChannelViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5828241BCCD90092E7D8 /* ChannelViewTableViewCell.swift */; };
@@ -28,6 +27,12 @@
 		283F5839241F691C0092E7D8 /* AddChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5838241F691B0092E7D8 /* AddChannelViewController.swift */; };
 		28DC3DE5241F963500D06C7F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC3DE4241F963500D06C7F /* ChatViewController.swift */; };
 		28DC3DE7241FB1B200D06C7F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC3DE6241FB1B200D06C7F /* NavigationController.swift */; };
+		28DC3DE9241FDE1900D06C7F /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC3DE8241FDE1800D06C7F /* UIColor+Additions.swift */; };
+		28DC3DEB241FDE4200D06C7F /* UICollectionView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC3DEA241FDE4200D06C7F /* UICollectionView+Addition.swift */; };
+		28DC3DED241FDE6600D06C7F /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC3DEC241FDE6600D06C7F /* UIView+Additions.swift */; };
+		28DC3DF2241FF4A100D06C7F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC3DF1241FF4A100D06C7F /* LoginViewController.swift */; };
+		28DC3DF5241FFAB100D06C7F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC3DF4241FFAB100D06C7F /* AboutViewController.swift */; };
+		28DC3DF8242002DE00D06C7F /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC3DF7242002DE00D06C7F /* AppSetting.swift */; };
 		57BC7EC13CC93C3D4768EC7C /* Pods_Winstars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AD8E65AA71FB3B4E5793FD /* Pods_Winstars.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +51,6 @@
 		280FED78240FC194002D2435 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		280FED8024101FEE002D2435 /* GroupViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewTableViewCell.swift; sourceTree = "<group>"; };
 		283F581D241B6ED20092E7D8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		283F581F241B6F2F0092E7D8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		283F5821241B72410092E7D8 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		283F5826241BBD050092E7D8 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		283F5828241BCCD90092E7D8 /* ChannelViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewTableViewCell.swift; sourceTree = "<group>"; };
@@ -55,6 +59,12 @@
 		283F5838241F691B0092E7D8 /* AddChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelViewController.swift; sourceTree = "<group>"; };
 		28DC3DE4241F963500D06C7F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		28DC3DE6241FB1B200D06C7F /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		28DC3DE8241FDE1800D06C7F /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		28DC3DEA241FDE4200D06C7F /* UICollectionView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Addition.swift"; sourceTree = "<group>"; };
+		28DC3DEC241FDE6600D06C7F /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
+		28DC3DF1241FF4A100D06C7F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		28DC3DF4241FFAB100D06C7F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		28DC3DF7242002DE00D06C7F /* AppSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetting.swift; sourceTree = "<group>"; };
 		5D058205A266DD8A10EAD606 /* Pods-Winstars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winstars.debug.xcconfig"; path = "Target Support Files/Pods-Winstars/Pods-Winstars.debug.xcconfig"; sourceTree = "<group>"; };
 		A0AD8E65AA71FB3B4E5793FD /* Pods_Winstars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Winstars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E8980C0EBB4A9F9B44CBF4 /* Pods-Winstars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Winstars.release.xcconfig"; path = "Target Support Files/Pods-Winstars/Pods-Winstars.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,11 +105,10 @@
 		280FED4C240E4C91002D2435 /* Winstars */ = {
 			isa = PBXGroup;
 			children = (
+				28DC3DF62420027E00D06C7F /* Controller */,
 				283F5825241BBCEF0092E7D8 /* Extenstion */,
-				280FED77240FC178002D2435 /* Controller */,
+				280FED77240FC178002D2435 /* View Controller */,
 				280FED74240FADAD002D2435 /* Model */,
-				280FED4D240E4C91002D2435 /* AppDelegate.swift */,
-				280FED4F240E4C91002D2435 /* SceneDelegate.swift */,
 				280FED53240E4C91002D2435 /* Main.storyboard */,
 				280FED56240E4C9D002D2435 /* Assets.xcassets */,
 				280FED58240E4C9D002D2435 /* LaunchScreen.storyboard */,
@@ -114,22 +123,23 @@
 			children = (
 				280FED75240FADBA002D2435 /* Channel.swift */,
 				283F581D241B6ED20092E7D8 /* Message.swift */,
-				283F581F241B6F2F0092E7D8 /* User.swift */,
 				283F5834241E2C040092E7D8 /* DatabaseRepresentation.swift */,
 				283F5836241E48AF0092E7D8 /* Group.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		280FED77240FC178002D2435 /* Controller */ = {
+		280FED77240FC178002D2435 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				28DC3DF3241FFA9D00D06C7F /* About */,
+				28DC3DF0241FF41900D06C7F /* Login */,
 				28DC3DE3241F8B0F00D06C7F /* Chat */,
 				283F5824241B975C0092E7D8 /* Channel */,
 				283F5823241B95A40092E7D8 /* Group */,
 				28DC3DE6241FB1B200D06C7F /* NavigationController.swift */,
 			);
-			path = Controller;
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 		283F5823241B95A40092E7D8 /* Group */ = {
@@ -155,6 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				283F5826241BBD050092E7D8 /* Extention.swift */,
+				28DC3DE8241FDE1800D06C7F /* UIColor+Additions.swift */,
+				28DC3DEA241FDE4200D06C7F /* UICollectionView+Addition.swift */,
+				28DC3DEC241FDE6600D06C7F /* UIView+Additions.swift */,
 			);
 			path = Extenstion;
 			sourceTree = "<group>";
@@ -165,6 +178,32 @@
 				28DC3DE4241F963500D06C7F /* ChatViewController.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		28DC3DF0241FF41900D06C7F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				28DC3DF1241FF4A100D06C7F /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		28DC3DF3241FFA9D00D06C7F /* About */ = {
+			isa = PBXGroup;
+			children = (
+				28DC3DF4241FFAB100D06C7F /* AboutViewController.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		28DC3DF62420027E00D06C7F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				280FED4F240E4C91002D2435 /* SceneDelegate.swift */,
+				280FED4D240E4C91002D2435 /* AppDelegate.swift */,
+				28DC3DF7242002DE00D06C7F /* AppSetting.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		61A66066E1FE4EA61582AC4B /* Frameworks */ = {
@@ -302,21 +341,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28DC3DED241FDE6600D06C7F /* UIView+Additions.swift in Sources */,
 				280FED4E240E4C91002D2435 /* AppDelegate.swift in Sources */,
+				28DC3DF8242002DE00D06C7F /* AppSetting.swift in Sources */,
 				280FED79240FC194002D2435 /* GroupViewController.swift in Sources */,
 				280FED50240E4C91002D2435 /* SceneDelegate.swift in Sources */,
+				28DC3DF2241FF4A100D06C7F /* LoginViewController.swift in Sources */,
 				283F5835241E2C050092E7D8 /* DatabaseRepresentation.swift in Sources */,
 				283F581E241B6ED20092E7D8 /* Message.swift in Sources */,
 				280FED8124101FEE002D2435 /* GroupViewTableViewCell.swift in Sources */,
 				283F5837241E48B00092E7D8 /* Group.swift in Sources */,
 				28DC3DE7241FB1B200D06C7F /* NavigationController.swift in Sources */,
 				280FED76240FADBA002D2435 /* Channel.swift in Sources */,
+				28DC3DE9241FDE1900D06C7F /* UIColor+Additions.swift in Sources */,
+				28DC3DEB241FDE4200D06C7F /* UICollectionView+Addition.swift in Sources */,
 				283F5829241BCCD90092E7D8 /* ChannelViewTableViewCell.swift in Sources */,
 				283F5822241B72410092E7D8 /* ChannelViewController.swift in Sources */,
 				28DC3DE5241F963500D06C7F /* ChatViewController.swift in Sources */,
 				283F5827241BBD050092E7D8 /* Extention.swift in Sources */,
 				283F5839241F691C0092E7D8 /* AddChannelViewController.swift in Sources */,
-				283F5820241B6F2F0092E7D8 /* User.swift in Sources */,
+				28DC3DF5241FFAB100D06C7F /* AboutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

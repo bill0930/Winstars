@@ -11,7 +11,7 @@ import UIKit
 import Firebase
 import FirebaseFirestoreSwift
 import FirebaseCore
-
+import FirebaseAuth
 
 class ChannelViewController: UIViewController  {
     
@@ -38,12 +38,13 @@ class ChannelViewController: UIViewController  {
     
     private var channels = [Channel]()
     private var channelListener: ListenerRegistration?
-    
+    let currentUser: User? = Auth.auth().currentUser
     
     deinit {
         channelListener?.remove()
     }
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navbar.title = (data["group_name"] as! String)
@@ -71,7 +72,7 @@ class ChannelViewController: UIViewController  {
             return
         }
         
-        let channel = Channel(name: channelName, author: "testAuthor", emoji: "😆")
+        let channel = Channel(name: channelName, author: AppSettings.displayName, emoji: "😆")
         channelReference.addDocument(data: channel.representation) { error in
             if let e = error {
                 print("Error saving channel: \(e.localizedDescription)")
@@ -164,7 +165,7 @@ extension ChannelViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(channels[indexPath.row].representation)
         selectedChannel = channels[indexPath.row]
-        let vc = ChatViewController(user: User(senderId: "test", displayName: "Billy"), channel: selectedChannel!)
+        let vc = ChatViewController(user: currentUser!, channel: selectedChannel!, channelReference: channelReference)
         navigationController?.pushViewController(vc, animated: true)
         //        self.performSegue(withIdentifier: "toChatView", sender: self)
         
@@ -175,11 +176,6 @@ extension ChannelViewController: UITableViewDelegate, UITableViewDataSource {
         if (segue.identifier == "toAddChannelView") {
             let addChannelVC = segue.destination as? AddChannelViewController
             addChannelVC!.channelReference = channelReference
-        } else if (segue.identifier == "toChatView") {
-            //            let chatVC = segue.destination as? ChatViewController
-            //            chatVC?.data["channelReference"] = channelReference
-            //            chatVC?.data["channel_id"] = selectedChannel?.id!
-            //            chatVC?.data["channel_name"] = selectedChannel?.name
         }
         
         

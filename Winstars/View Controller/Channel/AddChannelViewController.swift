@@ -11,6 +11,7 @@ import UIKit
 import Firebase
 import FirebaseFirestoreSwift
 import FirebaseCore
+import FirebaseAuth
 
 class AddChannelViewController: UIViewController, UITextFieldDelegate {
     
@@ -77,7 +78,7 @@ class AddChannelViewController: UIViewController, UITextFieldDelegate {
                 
             } else{
                 
-                createChannel(channel: Channel(name: tittleTextField.text!, author: "textAuthor", emoji: selectedEmoji))
+                createChannel(channel: Channel(name: tittleTextField.text!, author: AppSettings.displayName, emoji: selectedEmoji))
                 
                 dismiss(animated: true, completion: nil)
             }
