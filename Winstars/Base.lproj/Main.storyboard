@@ -64,7 +64,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MTN-9B-AiN"/>
                     </view>
-                    <navigationItem key="navigationItem" id="b8S-xd-sbI"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="b8S-xd-sbI"/>
                     <connections>
                         <outlet property="groupLabelTableView" destination="Xlw-gn-M6J" id="q5i-HT-t9W"/>
                         <segue destination="fty-qM-Iu3" kind="show" identifier="toChannelView" id="uGN-VO-q4a"/>
@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JPr-yL-HFK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="621.73913043478262" y="-332.14285714285711"/>
+            <point key="canvasLocation" x="568" y="-332"/>
         </scene>
         <!--Channel View Controller-->
         <scene sceneID="Ayf-KP-25l">
@@ -109,7 +109,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我我我我我我我我我我我我我我我我我我我我我我我我我我v" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sre-Nv-UNc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我我我我我我我我我我我我我我我我我我我我我我我我我我v" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sre-Nv-UNc">
                                                     <rect key="frame" x="98" y="9" width="260" height="40"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                     <nil key="textColor"/>
@@ -165,7 +165,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ik0-UE-eUQ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JT0-dI-Nc8">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="JT0-dI-Nc8">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="cXD-J1-BXP">
                             <connections>
                                 <action selector="addButtonPressed:" destination="fty-qM-Iu3" id="Sqf-37-maj"/>
@@ -218,7 +218,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tell me the groupchat title" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="x03-Uv-Dze">
                                 <rect key="frame" x="20" y="507" width="374" height="34"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your mood ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzL-FX-IUZ">
                                 <rect key="frame" x="28" y="105" width="374" height="82"/>
@@ -296,11 +296,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="lhl-BT-QsO"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qzs-Hh-7Gh"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="qzs-Hh-7Gh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rXI-nF-h7i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2159" y="43"/>
+            <point key="canvasLocation" x="2157.971014492754" y="42.857142857142854"/>
         </scene>
         <!--Video VIew Controller-->
         <scene sceneID="ggz-Mg-5ON">
@@ -360,12 +360,16 @@
         <!--Group-->
         <scene sceneID="6F5-J9-mIb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="umE-7o-gHx" userLabel="Group" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="umE-7o-gHx" userLabel="Group" customClass="NavigationController" customModule="Winstars" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Group" image="person.3.fill" catalog="system" id="kdx-Xe-Ei6" userLabel="Group"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tkg-3J-v9a">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.93790227169999996" green="0.56165057419999997" blue="0.14114311339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

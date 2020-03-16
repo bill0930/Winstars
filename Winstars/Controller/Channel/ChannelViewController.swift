@@ -24,7 +24,7 @@ class ChannelViewController: UIViewController  {
         "group_id": nil ,
         "group_name": nil
         ] as [String : Any?]
-    
+    var selectedChannel: Channel? = nil
     
     private let channelCellIdentifier = "channelCell"
     private var currentChannelAlertController: UIAlertController?
@@ -162,17 +162,26 @@ extension ChannelViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        print(channels[indexPath.row])
+        print(channels[indexPath.row].representation)
+        selectedChannel = channels[indexPath.row]
+        let vc = ChatViewController(user: User(senderId: "test", displayName: "Billy"), channel: selectedChannel!)
+        navigationController?.pushViewController(vc, animated: true)
         //        self.performSegue(withIdentifier: "toChatView", sender: self)
         
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //        let chatViewController = segue.destination as! ChatViewController
-        let addChannelVC = segue.destination as? AddChannelViewController
-        addChannelVC!.channelReference = channelReference
-        //        messageViewController.data["messages"] = "testMsg"
+        if (segue.identifier == "toAddChannelView") {
+            let addChannelVC = segue.destination as? AddChannelViewController
+            addChannelVC!.channelReference = channelReference
+        } else if (segue.identifier == "toChatView") {
+            //            let chatVC = segue.destination as? ChatViewController
+            //            chatVC?.data["channelReference"] = channelReference
+            //            chatVC?.data["channel_id"] = selectedChannel?.id!
+            //            chatVC?.data["channel_name"] = selectedChannel?.name
+        }
+        
         
     }
 }

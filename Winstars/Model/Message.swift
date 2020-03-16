@@ -21,7 +21,4 @@ public struct Message: MessageType{
     
     public var kind: MessageKind
     
-    
-    
-    
 }
