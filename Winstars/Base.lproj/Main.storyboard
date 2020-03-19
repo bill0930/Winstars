@@ -29,23 +29,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppa-lv-l95">
-                                                    <rect key="frame" x="5" y="0.0" width="364" height="150"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Science" translatesAutoresizingMaskIntoConstraints="NO" id="W4l-Wh-A4L">
+                                                    <rect key="frame" x="20" y="11" width="334" height="128"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.87331873179999997" green="0.94547933340000001" blue="0.94278413059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="Ppa-lv-l95" firstAttribute="centerX" secondItem="3Qd-zl-CMm" secondAttribute="centerX" id="1wh-Uj-sM6"/>
-                                                <constraint firstItem="Ppa-lv-l95" firstAttribute="centerY" secondItem="3Qd-zl-CMm" secondAttribute="centerY" id="2Gj-PY-i8k"/>
-                                                <constraint firstItem="Ppa-lv-l95" firstAttribute="top" secondItem="3Qd-zl-CMm" secondAttribute="topMargin" constant="-11" id="pgw-Tl-JzD"/>
-                                                <constraint firstItem="Ppa-lv-l95" firstAttribute="leading" secondItem="3Qd-zl-CMm" secondAttribute="leadingMargin" constant="-15" id="wKL-nF-ByP"/>
+                                                <constraint firstItem="W4l-Wh-A4L" firstAttribute="leading" secondItem="3Qd-zl-CMm" secondAttribute="leadingMargin" id="9dX-11-WYF"/>
+                                                <constraint firstItem="W4l-Wh-A4L" firstAttribute="centerX" secondItem="3Qd-zl-CMm" secondAttribute="centerX" id="TAe-Ht-b7v"/>
+                                                <constraint firstItem="W4l-Wh-A4L" firstAttribute="centerY" secondItem="3Qd-zl-CMm" secondAttribute="centerY" id="Y9f-8f-lbX"/>
+                                                <constraint firstItem="W4l-Wh-A4L" firstAttribute="top" secondItem="3Qd-zl-CMm" secondAttribute="topMargin" id="dhO-iI-zif"/>
+                                                <constraint firstItem="W4l-Wh-A4L" firstAttribute="bottom" secondItem="3Qd-zl-CMm" secondAttribute="bottomMargin" id="he0-bD-Xan"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="W4l-Wh-A4L" secondAttribute="trailing" id="no0-Jy-B6g"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="categoryLabel" destination="Ppa-lv-l95" id="kTc-yh-dMk"/>
+                                            <outlet property="buttonImageView" destination="W4l-Wh-A4L" id="OQy-wo-Yma"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -72,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JPr-yL-HFK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="568" y="-332"/>
+            <point key="canvasLocation" x="566.66666666666674" y="-332.14285714285711"/>
         </scene>
         <!--Channel View Controller-->
         <scene sceneID="Ayf-KP-25l">
@@ -465,6 +464,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Science" width="872" height="625"/>
         <image name="person.3.fill" catalog="system" width="71" height="34"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="video.fill" catalog="system" width="64" height="40"/>

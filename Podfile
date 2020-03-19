@@ -15,6 +15,6 @@ target 'Winstars' do
   # Optionally, include the Swift extensions if you're using Swift.
   pod 'FirebaseFirestoreSwift'
   pod 'MessageKit'
-  pod 'Eureka'
+  pod 'PullToRefresher'
 
 end

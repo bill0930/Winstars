@@ -11,10 +11,12 @@ import Firebase
 import MessageKit
 import FirebaseFirestore
 import FirebaseAuth
+import PullToRefresh
 
 class ChatViewController: MessagesViewController{
     
     //    var data = [String : Any?]()
+    //    let refresher = PullToRefresh()
     
     private var messages: [Message] = []
     private var messageListener: ListenerRegistration?
@@ -25,6 +27,10 @@ class ChatViewController: MessagesViewController{
     private let db = Firestore.firestore()
     private let channelReference: CollectionReference
     private var threadReference: CollectionReference?
+    
+    let refreshControl = UIRefreshControl()
+    
+    
     
     private func setUpMultipleLineTitleView(title: String) {
         let label = UILabel(frame: CGRect(x:0, y:0, width:150, height:50))
@@ -58,7 +64,6 @@ class ChatViewController: MessagesViewController{
         }
         
         threadReference = channelReference.document(id).collection("thread")
-        print(threadReference.debugDescription)
         
         messageInputBar.delegate = self
         messagesCollectionView.messagesDataSource = self
@@ -70,18 +75,25 @@ class ChatViewController: MessagesViewController{
         messageInputBar.inputTextView.tintColor = .red
         messageInputBar.sendButton.setTitleColor(.primary, for: .normal)
         
-        messageListener = threadReference?.addSnapshotListener { querySnapshot, error in
-            guard let snapshot = querySnapshot else {
-                print("Error listening for channel updates: \(error?.localizedDescription ?? "No error")")
-                return
-            }
-            //            print("the chdocumentChangesange are \(snapshot.documentChanges.debugDescription)")
-            
-            snapshot.documentChanges.forEach { change in
-                //                print("the change type is \(change.type)")
-                self.handleDocumentChange(change)
-            }
+        messageListener = threadReference?
+            .order(by: "created", descending: false)
+            .limit(toLast: 100)
+            //to fetch last 100 messages
+            .addSnapshotListener { querySnapshot, error in
+                guard let snapshot = querySnapshot else {
+                    print("Error listening for channel updates: \(error?.localizedDescription ?? "No error")")
+                    return
+                }
+                //            print("the chdocumentChangesange are \(snapshot.documentChanges.debugDescription)")
+                
+                snapshot.documentChanges.forEach { change in
+                    self.handleDocumentChange(change)
+                }
         }
+        //
+        //        self.addPullToRefresh(refresher) {
+        //                print("pull to refresh")
+        //        }
         
     }
     
@@ -92,7 +104,7 @@ class ChatViewController: MessagesViewController{
         }
         
         messages.append(message)
-        messages.sort()
+        //        messages.sort()
         
         let isLatestMessage = messages.firstIndex(of: message) == (messages.count - 1)
         let shouldScrollToBottom = messagesCollectionView.isAtBottom && isLatestMessage
@@ -107,10 +119,10 @@ class ChatViewController: MessagesViewController{
     }
     
     private func handleDocumentChange(_ change: DocumentChange) {
-        print("the document change is being handle ")
-        print("message[] = \(messages)")
+        //        print("the document change is being handle ")
+        //        print("message[] = \(messages)")
         guard let message = Message(document: change.document) else {
-            print("cannot initiase")
+            //            print("cannot initiase")
             return
         }
         
@@ -118,7 +130,7 @@ class ChatViewController: MessagesViewController{
         print(change.type)
         switch change.type {
         case .added:
-            print("added type handled")
+            //            print("added type handled")
             self.insertNewMessage(message)
             
         default:
@@ -209,25 +221,25 @@ extension ChatViewController: MessagesDataSource {
     }
     
     func messageTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
-       
+        
         let name = message.sender.displayName
         return NSAttributedString(
-          string: name,
-          attributes: [
-            .font: UIFont.preferredFont(forTextStyle: .caption1),
-            .foregroundColor: UIColor(white: 0.3, alpha: 1)
-          ]
+            string: name,
+            attributes: [
+                .font: UIFont.preferredFont(forTextStyle: .caption1),
+                .foregroundColor: UIColor(white: 0.3, alpha: 1)
+            ]
         )
     }
     
     func messageBottomLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
         let date = messages[indexPath.section].sentDate.description
         return NSAttributedString(
-          string: date,
-          attributes: [
-            .font: UIFont.preferredFont(forTextStyle: .caption1),
-            .foregroundColor: UIColor(white: 0.3, alpha: 1)
-          ]
+            string: date,
+            attributes: [
+                .font: UIFont.preferredFont(forTextStyle: .caption1),
+                .foregroundColor: UIColor(white: 0.3, alpha: 1)
+            ]
         )
     }
 }
@@ -255,4 +267,8 @@ extension ChatViewController: MessageInputBarDelegate {
         
     }
     
+}
+
+
+extension ChatViewController{
 }
