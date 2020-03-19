@@ -130,9 +130,6 @@ extension GroupViewController: UITableViewDelegate, UITableViewDataSource {
         let cell =
             tableView.dequeueReusableCell( withIdentifier: groupCellIdentifier, for: indexPath) as! GroupViewTableViewCell
         if let image = UIImage(named: groups[indexPath.row].name){
-            let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: cell.frame.width - 10, height: cell.frame.height - 10))
-            imageView.image = image
-
             cell.buttonImageView.image = image
             cell.buttonImageView.contentMode = .scaleAspectFill
         }

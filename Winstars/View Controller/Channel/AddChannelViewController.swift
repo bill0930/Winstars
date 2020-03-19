@@ -16,14 +16,14 @@ import FirebaseAuth
 class AddChannelViewController: UIViewController, UITextFieldDelegate {
     
     var channelReference: CollectionReference? = nil
-    var selectedEmoji: String = "😀"
+    var selectedIcon: String = "ask"
     @IBOutlet weak var tittleTextField: UITextField!
     @IBOutlet weak var pickerView: UIPickerView!
     
     
     
-    let emojiArray = [
-        "😀","😅","😎", "😭", "🤔", "🤑","😂", "🥳"
+    let iconArray = [
+        "ask","new","share"
     ]
     
     override func viewDidLoad() {
@@ -78,7 +78,7 @@ class AddChannelViewController: UIViewController, UITextFieldDelegate {
                 
             } else{
                 
-                createChannel(channel: Channel(name: tittleTextField.text!, author: AppSettings.displayName, emoji: selectedEmoji))
+                createChannel(channel: Channel(name: tittleTextField.text!, author: AppSettings.displayName, emoji: selectedIcon))
                 
                 dismiss(animated: true, completion: nil)
             }
@@ -101,7 +101,7 @@ class AddChannelViewController: UIViewController, UITextFieldDelegate {
 
 extension AddChannelViewController: UIPickerViewDelegate, UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.emojiArray.count
+        return self.iconArray.count
         
     }
     
@@ -110,22 +110,31 @@ extension AddChannelViewController: UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 80.0
+        return 200
     }
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        var label = UILabel()
+
+        var imageView = UIImageView()
         if let v = view {
-            label = v as! UILabel
+            imageView = v as! UIImageView
         }
-        label.font = UIFont (name: "Helvetica Neue", size: 80)
-        label.text =  emojiArray[row]
-        label.textAlignment = .center
-        return label
         
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(named: iconArray[row])
+        
+        //        var label = UILabel()
+//        if let v = view {
+//            label = v as! UILabel
+//        }
+//        label.font = UIFont (name: "Helvetica Neue", size: 80)
+//        label.text =  emojiArray[row]
+//        label.textAlignment = .center
+//        return label
+        return imageView
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedEmoji = emojiArray[row]
-        print(selectedEmoji)
+        selectedIcon = iconArray[row]
+        print(selectedIcon)
         
     }
     

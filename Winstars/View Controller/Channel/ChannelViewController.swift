@@ -151,7 +151,10 @@ extension ChannelViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.dequeueReusableCell( withIdentifier: "channelCell", for: indexPath) as! ChannelViewTableViewCell
         cell.authorLabel?.text = "posted by: \(channels[indexPath.row].author)"
         cell.titleLabel?.text = "\(channels[indexPath.row].name)"
-        cell.emojiLabel?.text = (channels[indexPath.row].emoji)
+        if let image = UIImage(named: (channels[indexPath.row].icon)){
+            cell.imageView?.image = image
+            cell.imageView?.contentMode = .scaleAspectFill
+        }
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yy HH:mm"

@@ -14,14 +14,14 @@ struct Channel {
     let id: String?
     let name: String
     let author: String
-    let emoji: String
+    let icon: String
     let timestamp: Timestamp
     
     init(name: String, author: String, emoji: String) {
         id = nil
         self.author = author
         self.name = name
-        self.emoji = emoji
+        self.icon = emoji
         self.timestamp = Timestamp.init()
     }
     
@@ -46,7 +46,7 @@ struct Channel {
         id = document.documentID
         self.name = name
         self.author = author
-        self.emoji = emoji
+        self.icon = emoji
         self.timestamp = timestamp
     }
     
@@ -58,7 +58,7 @@ extension Channel: DatabaseRepresentation {
         var rep = [
             "name": name ,
             "author": author,
-            "emoji": emoji,
+            "emoji": icon,
             "timestamp": timestamp
             ] as [String : Any]
         
