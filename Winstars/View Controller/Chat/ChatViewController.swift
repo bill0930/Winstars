@@ -77,7 +77,7 @@ class ChatViewController: MessagesViewController{
         
         messageListener = threadReference?
             .order(by: "created", descending: false)
-            .limit(toLast: 100)
+            .limit(toLast: 5)
             //to fetch last 100 messages
             .addSnapshotListener { querySnapshot, error in
                 guard let snapshot = querySnapshot else {
@@ -137,6 +137,7 @@ class ChatViewController: MessagesViewController{
             print("default")
         }
     }
+
     
     private func save(_ message: Message) {
         threadReference?.addDocument(data: message.representation) { error in
@@ -148,7 +149,7 @@ class ChatViewController: MessagesViewController{
             self.messagesCollectionView.scrollToBottom()
         }
     }
-    
+
 }
 // MARK: - MessagesDisplayDelegate
 
@@ -271,4 +272,5 @@ extension ChatViewController: MessageInputBarDelegate {
 
 
 extension ChatViewController{
+
 }

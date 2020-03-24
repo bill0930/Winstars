@@ -122,14 +122,7 @@ extension AddChannelViewController: UIPickerViewDelegate, UIPickerViewDataSource
         imageView.contentMode = .scaleAspectFit
         imageView.image = UIImage(named: iconArray[row])
         
-        //        var label = UILabel()
-//        if let v = view {
-//            label = v as! UILabel
-//        }
-//        label.font = UIFont (name: "Helvetica Neue", size: 80)
-//        label.text =  emojiArray[row]
-//        label.textAlignment = .center
-//        return label
+        
         return imageView
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

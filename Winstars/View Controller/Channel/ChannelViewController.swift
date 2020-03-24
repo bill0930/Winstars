@@ -153,7 +153,7 @@ extension ChannelViewController: UITableViewDelegate, UITableViewDataSource {
         cell.titleLabel?.text = "\(channels[indexPath.row].name)"
         if let image = UIImage(named: (channels[indexPath.row].icon)){
             cell.imageView?.image = image
-            cell.imageView?.contentMode = .scaleAspectFill
+            cell.imageView?.contentMode = .scaleToFill
         }
         
         let dateFormatter = DateFormatter()
