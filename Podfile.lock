@@ -283,6 +283,7 @@ PODS:
   - PromisesObjC (1.2.8)
   - PullToRefresher (3.2)
   - SwiftyJSON (4.3.0)
+  - YoutubeKit (0.5.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.1)
@@ -294,6 +295,7 @@ DEPENDENCIES:
   - MessageKit
   - PullToRefresher
   - SwiftyJSON (~> 4.0)
+  - YoutubeKit
 
 SPEC REPOS:
   trunk:
@@ -325,6 +327,7 @@ SPEC REPOS:
     - PromisesObjC
     - PullToRefresher
     - SwiftyJSON
+    - YoutubeKit
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
@@ -355,7 +358,8 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   PullToRefresher: 746c1089710eb74a3a584921549296a2fe573314
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  YoutubeKit: 9f66eba839211158f2aac7ad3833593bd56fa8f9
 
-PODFILE CHECKSUM: 940aacfbf9a933cfd8f535163a08273f082be179
+PODFILE CHECKSUM: c57dfd09b7cee4da7dd5ef852e17323b1176004a
 
 COCOAPODS: 1.9.0

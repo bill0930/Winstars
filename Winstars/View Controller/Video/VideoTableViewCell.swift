@@ -11,7 +11,6 @@ import UIKit
 class VideoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var Indicator: UIActivityIndicatorView!
 

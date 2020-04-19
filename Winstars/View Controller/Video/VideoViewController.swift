@@ -10,12 +10,14 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 import Cache
+import YoutubeKit
+
 class VideoViewController: UIViewController,UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var videoTableView: UITableView!
-    
+    private var player: YTSwiftyPlayer!
+
     var items: [JSON]?
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -28,21 +30,40 @@ class VideoViewController: UIViewController,UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell( withIdentifier: "videoCell", for: indexPath) as! VideoTableViewCell
         
         cell.titleLabel?.text =  items?[indexPath.row]["snippet"]["title"].stringValue
-        cell.idLabel?.text = items?[indexPath.row]["contentDetails"]["videoId"].stringValue
+//        cell.idLabel?.text = items?[indexPath.row]["contentDetails"]["videoId"].stringValue
         let url = items?[indexPath.row]["snippet"]["thumbnails"]["medium"]["url"].stringValue
         if let _ = items {cell.Indicator.stopAnimating()} else {cell.Indicator.startAnimating()}
         Extension.setImage(from: url ??  "", to: cell.thumbnailImageView!)
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        print(items?[indexPath.row]["snippet"]["title"].stringValue)
-//        print(items?[indexPath.row]["snippet"]["thumbnails"]["medium"]["url"].stringValue)
+        let selectedVideoID = items?[indexPath.row]["contentDetails"]["videoId"].stringValue
+        player.loadVideo(videoID: selectedVideoID!)
     }
     
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Create a new player
+        player = YTSwiftyPlayer(
+            frame: CGRect(x: 0, y: 0, width: 1, height: 1),
+            playerVars: [
+                .playsInline(false),
+                .loopVideo(true),
+                .showRelatedVideo(false)
+            ])
+
+        // Enable auto playback when video is loaded
+        player.autoplay = true
+        player.loadPlayer()
+        // Set player view
+        view.addSubview(player)
+
+        // Set delegate for detect callback information from the player
+        player.delegate = self
+
+        
+        
         let url =  "https://api.jsonbin.io/b/5e9baf1c2940c704e1daeac7/1"
         
         let diskConfig = DiskConfig(name: "Floppy")
@@ -79,19 +100,46 @@ class VideoViewController: UIViewController,UITableViewDelegate, UITableViewData
             }
         }
         
-        
-        
-        
-        /*
-         // MARK: - Navigation
-         
-         // In a storyboard-based application, you will often want to do a little preparation before navigation
-         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-         }
-         */
-        
     }
+    
 }
 
+extension VideoViewController: YTSwiftyPlayerDelegate{
+        func playerReady(_ player: YTSwiftyPlayer) {
+        print(#function)
+        // After loading a video, player's API is available.
+        // e.g. player.mute()
+    }
+    
+    func player(_ player: YTSwiftyPlayer, didUpdateCurrentTime currentTime: Double) {
+        print("\(#function): \(currentTime)")
+    }
+    
+    func player(_ player: YTSwiftyPlayer, didChangeState state: YTSwiftyPlayerState) {
+        print("\(#function): \(state)")
+    }
+    
+    func player(_ player: YTSwiftyPlayer, didChangePlaybackRate playbackRate: Double) {
+        print("\(#function): \(playbackRate)")
+    }
+    
+    func player(_ player: YTSwiftyPlayer, didReceiveError error: YTSwiftyPlayerError) {
+        print("\(#function): \(error)")
+    }
+    
+    func player(_ player: YTSwiftyPlayer, didChangeQuality quality: YTSwiftyVideoQuality) {
+        print("\(#function): \(quality)")
+    }
+    
+    func apiDidChange(_ player: YTSwiftyPlayer) {
+        print(#function)
+    }
+    
+    func youtubeIframeAPIReady(_ player: YTSwiftyPlayer) {
+        print(#function)
+    }
+    
+    func youtubeIframeAPIFailedToLoad(_ player: YTSwiftyPlayer) {
+        print(#function)
+    }
+}
