@@ -158,12 +158,14 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
+  - Alamofire (5.1.0)
   - BoringSSL-GRPC (0.0.3):
     - BoringSSL-GRPC/Implementation (= 0.0.3)
     - BoringSSL-GRPC/Interface (= 0.0.3)
   - BoringSSL-GRPC/Implementation (0.0.3):
     - BoringSSL-GRPC/Interface (= 0.0.3)
   - BoringSSL-GRPC/Interface (0.0.3)
+  - Cache (5.2.0)
   - Firebase/Analytics (6.18.0):
     - Firebase/Core
   - Firebase/Auth (6.18.0):
@@ -280,19 +282,25 @@ PODS:
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
   - PullToRefresher (3.2)
+  - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.1)
+  - Cache
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Firestore
   - FirebaseFirestoreSwift
   - MessageKit
   - PullToRefresher
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
     - abseil
+    - Alamofire
     - BoringSSL-GRPC
+    - Cache
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -316,10 +324,13 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - PullToRefresher
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
+  Cache: 807c5d86d01a177f06ede9865add3aea269bbfd4
   Firebase: 0490eca762a72e4f1582319539153897f1508dee
   FirebaseAnalytics: 058d71e714a1a6804d9e0f25e3bb18e377a51579
   FirebaseAuth: 5ce2b03a3d7fe56b7a6e4c5ec7ff1522890b1d6f
@@ -343,7 +354,8 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   PullToRefresher: 746c1089710eb74a3a584921549296a2fe573314
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 27bf33211a9cb0bbe5567b90fa2e73893765cddb
+PODFILE CHECKSUM: 940aacfbf9a933cfd8f535163a08273f082be179
 
 COCOAPODS: 1.9.0

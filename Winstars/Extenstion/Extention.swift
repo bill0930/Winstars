@@ -7,11 +7,13 @@
 //
 
 import Foundation
-
+import UIKit
 /// 直接将Struct或Class转成Dictionary
 protocol Convertable: Codable {
     
 }
+
+
 
 extension Convertable {
     
@@ -42,4 +44,19 @@ public class Extension {
         
         return emojiArray.shuffled().first
     }
+    public static func setImage(from url: String, to imageView: UIImageView) {
+        guard let imageURL = URL(string: url) else { return }
+        
+        // just not to cause a deadlock in UI!
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+            
+            let image = UIImage(data: imageData)
+            DispatchQueue.main.async {
+                imageView.image = image
+                imageView.contentMode = .scaleToFill
+            }
+        }
+    }
+    
 }

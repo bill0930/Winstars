@@ -16,5 +16,7 @@ target 'Winstars' do
   pod 'FirebaseFirestoreSwift'
   pod 'MessageKit'
   pod 'PullToRefresher'
-
+  pod 'Alamofire', '~> 5.1'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'Cache'
 end

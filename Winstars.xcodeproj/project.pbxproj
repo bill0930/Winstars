@@ -18,6 +18,8 @@
 		280FED76240FADBA002D2435 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED75240FADBA002D2435 /* Channel.swift */; };
 		280FED79240FC194002D2435 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED78240FC194002D2435 /* GroupViewController.swift */; };
 		280FED8124101FEE002D2435 /* GroupViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED8024101FEE002D2435 /* GroupViewTableViewCell.swift */; };
+		282DC846244BD3D700F6E9FA /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282DC845244BD3D700F6E9FA /* VideoViewController.swift */; };
+		282DC848244BE85B00F6E9FA /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282DC847244BE85B00F6E9FA /* VideoTableViewCell.swift */; };
 		283F581E241B6ED20092E7D8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F581D241B6ED20092E7D8 /* Message.swift */; };
 		283F5822241B72410092E7D8 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5821241B72410092E7D8 /* ChannelViewController.swift */; };
 		283F5827241BBD050092E7D8 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5826241BBD050092E7D8 /* Extention.swift */; };
@@ -50,6 +52,8 @@
 		280FED75240FADBA002D2435 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		280FED78240FC194002D2435 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		280FED8024101FEE002D2435 /* GroupViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewTableViewCell.swift; sourceTree = "<group>"; };
+		282DC845244BD3D700F6E9FA /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		282DC847244BE85B00F6E9FA /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		283F581D241B6ED20092E7D8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		283F5821241B72410092E7D8 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		283F5826241BBD050092E7D8 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 		280FED77240FC178002D2435 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				282DC844244BD39E00F6E9FA /* Video */,
 				28DC3DF3241FFA9D00D06C7F /* About */,
 				28DC3DF0241FF41900D06C7F /* Login */,
 				28DC3DE3241F8B0F00D06C7F /* Chat */,
@@ -140,6 +145,15 @@
 				28DC3DE6241FB1B200D06C7F /* NavigationController.swift */,
 			);
 			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		282DC844244BD39E00F6E9FA /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				282DC845244BD3D700F6E9FA /* VideoViewController.swift */,
+				282DC847244BE85B00F6E9FA /* VideoTableViewCell.swift */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 		283F5823241B95A40092E7D8 /* Group */ = {
@@ -344,11 +358,13 @@
 				28DC3DED241FDE6600D06C7F /* UIView+Additions.swift in Sources */,
 				280FED4E240E4C91002D2435 /* AppDelegate.swift in Sources */,
 				28DC3DF8242002DE00D06C7F /* AppSetting.swift in Sources */,
+				282DC848244BE85B00F6E9FA /* VideoTableViewCell.swift in Sources */,
 				280FED79240FC194002D2435 /* GroupViewController.swift in Sources */,
 				280FED50240E4C91002D2435 /* SceneDelegate.swift in Sources */,
 				28DC3DF2241FF4A100D06C7F /* LoginViewController.swift in Sources */,
 				283F5835241E2C050092E7D8 /* DatabaseRepresentation.swift in Sources */,
 				283F581E241B6ED20092E7D8 /* Message.swift in Sources */,
+				282DC846244BD3D700F6E9FA /* VideoViewController.swift in Sources */,
 				280FED8124101FEE002D2435 /* GroupViewTableViewCell.swift in Sources */,
 				283F5837241E48B00092E7D8 /* Group.swift in Sources */,
 				28DC3DE7241FB1B200D06C7F /* NavigationController.swift in Sources */,
