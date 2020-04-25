@@ -20,6 +20,7 @@
 		280FED8124101FEE002D2435 /* GroupViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FED8024101FEE002D2435 /* GroupViewTableViewCell.swift */; };
 		282DC846244BD3D700F6E9FA /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282DC845244BD3D700F6E9FA /* VideoViewController.swift */; };
 		282DC848244BE85B00F6E9FA /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282DC847244BE85B00F6E9FA /* VideoTableViewCell.swift */; };
+		282DC84D244D181A00F6E9FA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282DC84C244D181A00F6E9FA /* GameViewController.swift */; };
 		283F581E241B6ED20092E7D8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F581D241B6ED20092E7D8 /* Message.swift */; };
 		283F5822241B72410092E7D8 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5821241B72410092E7D8 /* ChannelViewController.swift */; };
 		283F5827241BBD050092E7D8 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5826241BBD050092E7D8 /* Extention.swift */; };
@@ -54,6 +55,7 @@
 		280FED8024101FEE002D2435 /* GroupViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewTableViewCell.swift; sourceTree = "<group>"; };
 		282DC845244BD3D700F6E9FA /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		282DC847244BE85B00F6E9FA /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		282DC84C244D181A00F6E9FA /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		283F581D241B6ED20092E7D8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		283F5821241B72410092E7D8 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		283F5826241BBD050092E7D8 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		280FED77240FC178002D2435 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				282DC84B244D17FE00F6E9FA /* Game */,
 				282DC844244BD39E00F6E9FA /* Video */,
 				28DC3DF3241FFA9D00D06C7F /* About */,
 				28DC3DF0241FF41900D06C7F /* Login */,
@@ -154,6 +157,14 @@
 				282DC847244BE85B00F6E9FA /* VideoTableViewCell.swift */,
 			);
 			path = Video;
+			sourceTree = "<group>";
+		};
+		282DC84B244D17FE00F6E9FA /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				282DC84C244D181A00F6E9FA /* GameViewController.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 		283F5823241B95A40092E7D8 /* Group */ = {
@@ -369,6 +380,7 @@
 				283F5837241E48B00092E7D8 /* Group.swift in Sources */,
 				28DC3DE7241FB1B200D06C7F /* NavigationController.swift in Sources */,
 				280FED76240FADBA002D2435 /* Channel.swift in Sources */,
+				282DC84D244D181A00F6E9FA /* GameViewController.swift in Sources */,
 				28DC3DE9241FDE1900D06C7F /* UIColor+Additions.swift in Sources */,
 				28DC3DEB241FDE4200D06C7F /* UICollectionView+Addition.swift in Sources */,
 				283F5829241BCCD90092E7D8 /* ChannelViewTableViewCell.swift in Sources */,
