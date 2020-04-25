@@ -28,25 +28,25 @@ In this project, since setting up a backend server from scratch (server, api doc
 - Add a collection name "groups"
 - Add five documents under "groups" collection with the following fields
 - The documentID does not matter, you may use Auto-ID
+- For each documentID under "groups",
+- each item should have an auto-genereted ID,
 
-|  Field |Type   | Value|
-|---|---|---|
-| listNum  | number  | 1 |
-|name |String | Science|
+1st Document, 
+- Field: listNum, Type: number, Value: 0
+- Field: name, Type: string, value: "Science"
 
-|  Field |Type   | Value|
-|---|---|---|
-| listNum  | number  | 1 |
-|name |String | Science|
-|  Field |Type   | Value|
-|---|---|---|
-| listNum  | number  | 1 |
-|name |String | Science|
-|  Field |Type   | Value|
-|---|---|---|
-| listNum  | number  | 1 |
-|name |String | Science|
-|  Field |Type   | Value|
-|---|---|---|
-| listNum  | number  | 1 |
-|name |String | Science|
+2nd Document, 
+- Field: listNum, Type: number, Value: 1
+- Field: name, Type: string, value: "Technology"
+
+3rd Document, 
+- Field: listNum, Type: number, Value: 2
+- Field: name, Type: string, value: "Engineering"
+
+4th Document, 
+- Field: listNum, Type: number, Value: 3
+- Field: name, Type: string, value: "Mathematics"
+
+5th Document, 
+- Field: listNum, Type: number, Value: 4
+- Field: name, Type: string, value: "Coding"
