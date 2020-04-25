@@ -17,6 +17,13 @@ In this project, since setting up a backend server from scratch (server, api doc
 
 
 ### Before start
+
+## Getting the Project
+1. git clone or download the project
+2. open the terminal and `cd` to the project e.g`cd ../Desktop/Winstars`
+3. `pod install` to download the dependencies, if failed to run command , make sure you have installed [cocoapods](https://cocoapods.org/)
+4. Open the `Winstars.xcworkspace`
+
 1.   Remember to add/change API in \ViewController\VIdeo\DistrictViewController.swift
  - Refer to this [YouTube Data API Overview](https://developers.google.com/youtube/v3/getting-started)
 2. Remeber to do initial set up for firebase
