@@ -14,49 +14,59 @@ import YoutubeKit
 
 class DistrictViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
-    let districts = ["Hong Kong", "Taiwan", "Korea", "Japan", "Singopore"]
-    let titles = ["明明就", "說了再見", "大笨鐘", "hello"]
+    //Please Replace your own API Key
+    let API_KEY = "AIzaSyDCQU46EIUgYtRh-ewY81tckVHAhbr5UMk"
+
+    //Please define your districts here
+    let districts = ["自動販賣機", "鋼琴", "夾公仔", "hello"]
+    
     var items: [JSON]?
     var selectedDistrict: String?
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return titles.count
+        return districts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell( withIdentifier: "districtCell", for: indexPath) as! DistrictTableViewCell
-        cell.districtLabel.text = titles[indexPath.row]
+        cell.districtLabel.text = districts[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let querySring = titles[indexPath.row]
+        let querySring = districts[indexPath.row]
         selectedDistrict = querySring
         let filteredItems = items?.filter({ (item) -> Bool in
             item["snippet"]["title"].stringValue.contains(querySring)
         })
-        print(filteredItems)
         self.performSegue(withIdentifier: "toVideoVC", sender: filteredItems)
-        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchData()
-        
         // Do any additional setup after loading the view.
     }
     
     func fetchData(){
-        let url =  "https://api.jsonbin.io/b/5e9baf1c2940c704e1daeac7/1"
+        let url =  "https://www.googleapis.com/youtube/v3/playlistItems"
+        let playlistID = "PLdqf9f9QD5h5kfwLj5dINs-BPWHHpTu8Z"
+        let parameters = [
+            "part": "contentDetails, id, snippet",
+            "maxResults": "50",
+            "playlistId": playlistID,
+            "key": API_KEY
+        ]
         
+        //Cache Definition for 0.1 Hours = 6min
         let diskConfig = DiskConfig(name: "Floppy")
-        let memoryConfig = MemoryConfig(expiry: .date(Date().addingTimeInterval(60*60*24)), countLimit: 10, totalCostLimit: 10)
+        let memoryConfig = MemoryConfig(expiry: .date(Date().addingTimeInterval(60*60*0.1)), countLimit: 10, totalCostLimit: 10)
         
         let storage = try? Storage(
             diskConfig: diskConfig,
@@ -67,7 +77,8 @@ class DistrictViewController: UIViewController,UITableViewDelegate, UITableViewD
         if let entry =  try? storage?.entry(forKey: "itemsKey"){
             items = entry.object.array
         }else {
-            AF.request(url).responseJSON { response in
+            //Requesting API
+            AF.request(url, parameters: parameters).responseJSON { response in
                 switch response.result {
                 case .success(let value):
                     do {

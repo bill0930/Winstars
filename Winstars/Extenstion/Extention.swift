@@ -13,8 +13,6 @@ protocol Convertable: Codable {
     
 }
 
-
-
 extension Convertable {
     
     /// 直接将Struct或Class转成Dictionary
