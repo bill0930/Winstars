@@ -28,6 +28,8 @@
 		283F5835241E2C050092E7D8 /* DatabaseRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5834241E2C040092E7D8 /* DatabaseRepresentation.swift */; };
 		283F5837241E48B00092E7D8 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5836241E48AF0092E7D8 /* Group.swift */; };
 		283F5839241F691C0092E7D8 /* AddChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283F5838241F691B0092E7D8 /* AddChannelViewController.swift */; };
+		28DA3B9C2454AD29005B8C2E /* DistrictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DA3B9B2454AD29005B8C2E /* DistrictViewController.swift */; };
+		28DA3B9E2454AF6A005B8C2E /* DistrictTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DA3B9D2454AF6A005B8C2E /* DistrictTableViewCell.swift */; };
 		28DC3DE5241F963500D06C7F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC3DE4241F963500D06C7F /* ChatViewController.swift */; };
 		28DC3DE7241FB1B200D06C7F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC3DE6241FB1B200D06C7F /* NavigationController.swift */; };
 		28DC3DE9241FDE1900D06C7F /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC3DE8241FDE1800D06C7F /* UIColor+Additions.swift */; };
@@ -63,6 +65,8 @@
 		283F5834241E2C040092E7D8 /* DatabaseRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepresentation.swift; sourceTree = "<group>"; };
 		283F5836241E48AF0092E7D8 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		283F5838241F691B0092E7D8 /* AddChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelViewController.swift; sourceTree = "<group>"; };
+		28DA3B9B2454AD29005B8C2E /* DistrictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictViewController.swift; sourceTree = "<group>"; };
+		28DA3B9D2454AF6A005B8C2E /* DistrictTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictTableViewCell.swift; sourceTree = "<group>"; };
 		28DC3DE4241F963500D06C7F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		28DC3DE6241FB1B200D06C7F /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		28DC3DE8241FDE1800D06C7F /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 			children = (
 				282DC845244BD3D700F6E9FA /* VideoViewController.swift */,
 				282DC847244BE85B00F6E9FA /* VideoTableViewCell.swift */,
+				28DA3B9B2454AD29005B8C2E /* DistrictViewController.swift */,
+				28DA3B9D2454AF6A005B8C2E /* DistrictTableViewCell.swift */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -378,6 +384,7 @@
 				282DC846244BD3D700F6E9FA /* VideoViewController.swift in Sources */,
 				280FED8124101FEE002D2435 /* GroupViewTableViewCell.swift in Sources */,
 				283F5837241E48B00092E7D8 /* Group.swift in Sources */,
+				28DA3B9E2454AF6A005B8C2E /* DistrictTableViewCell.swift in Sources */,
 				28DC3DE7241FB1B200D06C7F /* NavigationController.swift in Sources */,
 				280FED76240FADBA002D2435 /* Channel.swift in Sources */,
 				282DC84D244D181A00F6E9FA /* GameViewController.swift in Sources */,
@@ -386,6 +393,7 @@
 				283F5829241BCCD90092E7D8 /* ChannelViewTableViewCell.swift in Sources */,
 				283F5822241B72410092E7D8 /* ChannelViewController.swift in Sources */,
 				28DC3DE5241F963500D06C7F /* ChatViewController.swift in Sources */,
+				28DA3B9C2454AD29005B8C2E /* DistrictViewController.swift in Sources */,
 				283F5827241BBD050092E7D8 /* Extention.swift in Sources */,
 				283F5839241F691C0092E7D8 /* AddChannelViewController.swift in Sources */,
 				28DC3DF5241FFAB100D06C7F /* AboutViewController.swift in Sources */,

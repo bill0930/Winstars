@@ -12,11 +12,11 @@ import Alamofire
 import Cache
 import YoutubeKit
 
-class VideoViewController: UIViewController,UITableViewDelegate, UITableViewDataSource{
+class VideoViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, YTSwiftyPlayerDelegate{
     
     @IBOutlet weak var videoTableView: UITableView!
     private var player: YTSwiftyPlayer!
-
+    
     var items: [JSON]?
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -64,82 +64,8 @@ class VideoViewController: UIViewController,UITableViewDelegate, UITableViewData
 
         
         
-        let url =  "https://api.jsonbin.io/b/5e9baf1c2940c704e1daeac7/1"
-        
-        let diskConfig = DiskConfig(name: "Floppy")
-        let memoryConfig = MemoryConfig(expiry: .date(Date().addingTimeInterval(60*60*5)), countLimit: 10, totalCostLimit: 10)
-        
-        let storage = try? Storage(
-            diskConfig: diskConfig,
-            memoryConfig: memoryConfig,
-            transformer: TransformerFactory.forCodable(ofType: JSON.self)
-        )
-        
-        if let entry =  try? storage?.entry(forKey: "itemsKey"){
-            items = entry.object.array
-        }else {
-            AF.request(url).responseJSON { response in
-                
-                switch response.result {
-                case .success(let value):
-                    do {
-                        let json = JSON(value)
-                        let items = json["items"]
-                        
-                        try storage?.setObject(items, forKey: "itemsKey")
-                        self.items = try storage?.entry(forKey: "itemsKey").object.array
-                        self.videoTableView.reloadData()
-                    } catch {
-                        print(error)
-                    }
-                    
-                case .failure(let error):
-                    print(error)
-                }
-                // Do any additional setup after loading the view.
-            }
-        }
-        
-    }
-    
-}
 
-extension VideoViewController: YTSwiftyPlayerDelegate{
-        func playerReady(_ player: YTSwiftyPlayer) {
-        print(#function)
-        // After loading a video, player's API is available.
-        // e.g. player.mute()
+        
     }
     
-    func player(_ player: YTSwiftyPlayer, didUpdateCurrentTime currentTime: Double) {
-        print("\(#function): \(currentTime)")
-    }
-    
-    func player(_ player: YTSwiftyPlayer, didChangeState state: YTSwiftyPlayerState) {
-        print("\(#function): \(state)")
-    }
-    
-    func player(_ player: YTSwiftyPlayer, didChangePlaybackRate playbackRate: Double) {
-        print("\(#function): \(playbackRate)")
-    }
-    
-    func player(_ player: YTSwiftyPlayer, didReceiveError error: YTSwiftyPlayerError) {
-        print("\(#function): \(error)")
-    }
-    
-    func player(_ player: YTSwiftyPlayer, didChangeQuality quality: YTSwiftyVideoQuality) {
-        print("\(#function): \(quality)")
-    }
-    
-    func apiDidChange(_ player: YTSwiftyPlayer) {
-        print(#function)
-    }
-    
-    func youtubeIframeAPIReady(_ player: YTSwiftyPlayer) {
-        print(#function)
-    }
-    
-    func youtubeIframeAPIFailedToLoad(_ player: YTSwiftyPlayer) {
-        print(#function)
-    }
 }

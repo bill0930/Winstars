@@ -285,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H1c-Ey-ZlV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2157.971014492754" y="-613.39285714285711"/>
+            <point key="canvasLocation" x="3065.217391304348" y="-613.85869565217399"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="b8T-LW-5Rw">
@@ -308,11 +308,11 @@
             <objects>
                 <viewController title="Video" id="4bq-j8-OXB" userLabel="Video VIew Controller" customClass="VideoViewController" customModule="Winstars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QRk-2j-QEI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4xx-uk-hR8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="videoCell" rowHeight="300" id="rWz-5L-52V" customClass="VideoTableViewCell" customModule="Winstars" customModuleProvider="target">
@@ -377,16 +377,77 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m3V-x3-JiA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Video" image="video.fill" catalog="system" id="INr-DV-28V">
-                        <color key="badgeColor" cocoaTouchSystemColor="lightTextColor"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="6tB-a7-538"/>
                     <connections>
                         <outlet property="videoTableView" destination="4xx-uk-hR8" id="44p-mw-WV2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NCo-bh-MaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1237.5999999999999" y="-1024.1379310344828"/>
+            <point key="canvasLocation" x="-330.43478260869568" y="-1024.7282608695652"/>
+        </scene>
+        <!--District View Controller-->
+        <scene sceneID="8gR-oi-VPE">
+            <objects>
+                <viewController id="HMb-wG-qEz" customClass="DistrictViewController" customModule="Winstars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="41T-vf-0lj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R4M-S8-iYJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="districtCell" rowHeight="200" id="nPR-iU-jek" customClass="DistrictTableViewCell" customModule="Winstars" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nPR-iU-jek" id="FfM-NC-gek">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wym-S9-jB2">
+                                                    <rect key="frame" x="30" y="21" width="374" height="178"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Wym-S9-jB2" firstAttribute="trailing" secondItem="FfM-NC-gek" secondAttribute="trailingMargin" constant="10" id="RDb-uK-vjt"/>
+                                                <constraint firstItem="Wym-S9-jB2" firstAttribute="bottom" secondItem="FfM-NC-gek" secondAttribute="bottomMargin" constant="10" id="o3j-xP-vMA"/>
+                                                <constraint firstItem="Wym-S9-jB2" firstAttribute="leading" secondItem="FfM-NC-gek" secondAttribute="leadingMargin" constant="10" id="o58-9O-PsS"/>
+                                                <constraint firstItem="Wym-S9-jB2" firstAttribute="top" secondItem="FfM-NC-gek" secondAttribute="topMargin" constant="10" id="ona-vg-F4r"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="districtLabel" destination="Wym-S9-jB2" id="P1d-jG-ZZh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HMb-wG-qEz" id="bpS-4b-Hua"/>
+                                    <outlet property="delegate" destination="HMb-wG-qEz" id="jDz-vb-5N8"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9ER-Qp-8zK" firstAttribute="trailing" secondItem="R4M-S8-iYJ" secondAttribute="trailing" id="0ux-Ae-joz"/>
+                            <constraint firstItem="9ER-Qp-8zK" firstAttribute="bottom" secondItem="R4M-S8-iYJ" secondAttribute="bottom" id="8DM-Eu-qXb"/>
+                            <constraint firstItem="R4M-S8-iYJ" firstAttribute="leading" secondItem="9ER-Qp-8zK" secondAttribute="leading" id="ITU-Oz-PPW"/>
+                            <constraint firstItem="R4M-S8-iYJ" firstAttribute="top" secondItem="9ER-Qp-8zK" secondAttribute="top" id="t4J-Yd-UJX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9ER-Qp-8zK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iLB-Pi-a4G"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="4bq-j8-OXB" kind="show" identifier="toVideoVC" id="sP6-gV-VFe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Emj-3x-bID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1168.1159420289855" y="-1018.2065217391305"/>
         </scene>
         <!--About VIew Controller-->
         <scene sceneID="q9Q-jp-geT">
@@ -665,7 +726,7 @@
                         <color key="selectedImageTintColor" red="0.93953561779999994" green="0.97968536620000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="4bq-j8-OXB" kind="relationship" relationship="viewControllers" id="bdp-Ce-kR0"/>
+                        <segue destination="yYE-de-Z1H" kind="relationship" relationship="viewControllers" id="oqI-3e-Aj1"/>
                         <segue destination="umE-7o-gHx" kind="relationship" relationship="viewControllers" id="O0T-l1-uKH"/>
                         <segue destination="2KU-dk-HH9" kind="relationship" relationship="viewControllers" id="I9v-Uo-6Uj"/>
                     </connections>
@@ -697,6 +758,25 @@
             </objects>
             <point key="canvasLocation" x="-293" y="-332"/>
         </scene>
+        <!--Video-->
+        <scene sceneID="XgE-NS-S3A">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yYE-de-Z1H" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Video" image="video" catalog="system" springLoaded="YES" id="sea-IO-UYq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jCk-HJ-vad">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HMb-wG-qEz" kind="relationship" relationship="rootViewController" id="3xb-fi-4BH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y0n-CD-vLY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1942.0289855072465" y="-1025.5434782608697"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Mathematics" width="871" height="625"/>
@@ -705,6 +785,6 @@
         <image name="gamecontroller.fill" catalog="system" width="128" height="82"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="video.fill" catalog="system" width="128" height="82"/>
+        <image name="video" catalog="system" width="128" height="83"/>
     </resources>
 </document>
