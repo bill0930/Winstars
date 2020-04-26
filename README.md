@@ -1,4 +1,5 @@
 # Winstars
+This is a iOS project
 
 ## Requirement 
 
