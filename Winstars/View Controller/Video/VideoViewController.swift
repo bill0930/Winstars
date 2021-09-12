@@ -46,7 +46,7 @@ class VideoViewController: UIViewController,UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         // Create a new player
         player = YTSwiftyPlayer(
-            frame: CGRect(x: 0, y: 0, width: 1, height: 1),
+            frame: CGRect(x: 0, y: 0, width: 100, height: 50),
             playerVars: [
                 .playsInline(false),
                 .loopVideo(true),
@@ -61,11 +61,6 @@ class VideoViewController: UIViewController,UITableViewDelegate, UITableViewData
 
         // Set delegate for detect callback information from the player
         player.delegate = self
-
-        
-        
-
-        
     }
     
 }

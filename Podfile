@@ -20,4 +20,7 @@ target 'Winstars' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Cache'
 	pod 'YoutubeKit'
+
+  end
+  
 end
